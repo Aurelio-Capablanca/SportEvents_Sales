@@ -9,6 +9,20 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Databases\" />
+	<Folder Include="Model\" />
+	<Folder Include="Domain\" />
+	  <Folder Include="Domain\Business" />
+	  <Folder Include="Domain\Rules" />
+	<Folder Include="DTO\" />
+	<Folder Include="Security\" />	  
   </ItemGroup>
 
 </Project>
