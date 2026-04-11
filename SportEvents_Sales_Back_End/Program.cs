@@ -20,12 +20,12 @@ if (app.Environment.IsDevelopment())
 }
 app.MapGet("/ping", () => "pong");
 
-//tester!
-app.MapGet("/users", async (AppDbContext db) =>
+//test DB connectivity
+app.MapGet("/health/db", async (AppDbContext db) =>
 {
-    return await db.Users.ToListAsync();
+    var ok = await db.Database.CanConnectAsync();
+    return ok ? Results.Ok("DB OK") : Results.Problem("DB FAIL");
 });
-
 
 app.UseAuthorization();
 app.MapControllers();

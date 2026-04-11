@@ -51,6 +51,18 @@
         }
       }
     },
+    "/health/db": {
+      "get": {
+        "tags": [
+          "SportEvents_Sales_Back_End"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/summary-weather": {
       "get": {
         "tags": [
