@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace SportEvents_Sales_Back_End.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("summary-weather")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries =

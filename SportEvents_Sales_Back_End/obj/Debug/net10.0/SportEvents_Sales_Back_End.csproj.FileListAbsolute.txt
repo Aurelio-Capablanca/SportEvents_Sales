@@ -26,7 +26,6 @@ C:\Users\aurel\Desktop\Projects\SportEvents_Sales\SportEvents_Sales_Back_End\obj
 C:\Users\aurel\Desktop\Projects\SportEvents_Sales\SportEvents_Sales_Back_End\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\aurel\Desktop\Projects\SportEvents_Sales\SportEvents_Sales_Back_End\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\aurel\Desktop\Projects\SportEvents_Sales\SportEvents_Sales_Back_End\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\aurel\Desktop\Projects\SportEvents_Sales\SportEvents_Sales_Back_End\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\aurel\Desktop\Projects\SportEvents_Sales\SportEvents_Sales_Back_End\obj\Debug\net10.0\SportEve.EFD0D79C.Up2Date
 C:\Users\aurel\Desktop\Projects\SportEvents_Sales\SportEvents_Sales_Back_End\obj\Debug\net10.0\SportEvents_Sales_Back_End.dll
 C:\Users\aurel\Desktop\Projects\SportEvents_Sales\SportEvents_Sales_Back_End\obj\Debug\net10.0\refint\SportEvents_Sales_Back_End.dll

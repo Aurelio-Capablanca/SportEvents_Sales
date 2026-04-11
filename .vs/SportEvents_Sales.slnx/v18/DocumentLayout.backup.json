@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B5D16AC1-E597-42DA-A281-4836A9A0E8A0}|SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5D16AC1-E597-42DA-A281-4836A9A0E8A0}|SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj|solutionrelative:sportevents_sales_back_end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B5D16AC1-E597-42DA-A281-4836A9A0E8A0}|SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5D16AC1-E597-42DA-A281-4836A9A0E8A0}|SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj|solutionrelative:sportevents_sales_back_end\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5D16AC1-E597-42DA-A281-4836A9A0E8A0}|SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5D16AC1-E597-42DA-A281-4836A9A0E8A0}|SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj|solutionrelative:sportevents_sales_back_end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5D16AC1-E597-42DA-A281-4836A9A0E8A0}|SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,29 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "SportEvents_Sales_Back_End\\Controllers\\WeatherForecastController.cs",
               "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "SportEvents_Sales_Back_End\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T02:58:51.041Z"
+              "WhenOpened": "2026-04-11T02:58:51.041Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Program.cs",
               "RelativeDocumentMoniker": "SportEvents_Sales_Back_End\\Program.cs",
               "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Program.cs",
               "RelativeToolTip": "SportEvents_Sales_Back_End\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T02:58:04.972Z",
               "EditorCaption": ""
