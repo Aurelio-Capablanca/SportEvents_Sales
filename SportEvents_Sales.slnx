@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SportEvents_Sales_Back_End/SportEvents_Sales_Back_End.csproj" />
+  <Project Path="SportEvents_Sales_Front_End/SportEvents_Sales_Front_End.csproj" />
+</Solution>
