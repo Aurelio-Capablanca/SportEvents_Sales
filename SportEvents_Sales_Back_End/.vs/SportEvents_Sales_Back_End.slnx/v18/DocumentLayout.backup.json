@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\sportevents_sales_back_end.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:sportevents_sales_back_end.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\databaseaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:databaseaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,45 +34,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SportEvents_Sales_Back_End",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj",
-              "RelativeDocumentMoniker": "SportEvents_Sales_Back_End.csproj",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj",
-              "RelativeToolTip": "SportEvents_Sales_Back_End.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-04-11T04:19:05.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Properties\\launchSettings.json",
               "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-04-11T03:52:38.766Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\WeatherForecast.cs",
-              "RelativeToolTip": "WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwBkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T03:43:17.301Z",
+              "WhenOpened": "2026-04-11T03:29:51.477Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-11T05:40:56.624Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -79,22 +86,41 @@
               "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
               "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T03:42:25.111Z",
+              "WhenOpened": "2026-04-11T06:53:04.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\DatabaseAccess\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DatabaseAccess\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\DatabaseAccess\\AppDbContext.cs",
+              "RelativeToolTip": "DatabaseAccess\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T03:29:51.477Z",
+              "WhenOpened": "2026-04-11T05:10:11.825Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\UserEntity.cs",
+              "RelativeDocumentMoniker": "Model\\Entities\\UserEntity.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\UserEntity.cs",
+              "RelativeToolTip": "Model\\Entities\\UserEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T04:52:39.58Z",
               "EditorCaption": ""
             }
           ]

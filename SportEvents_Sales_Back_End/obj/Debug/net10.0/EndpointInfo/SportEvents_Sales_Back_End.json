@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:5105"
+      "url": "http://0.0.0.0:5105"
     }
   ],
   "paths": {
@@ -22,6 +22,28 @@
               "text/plain": {
                 "schema": {
                   "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": [
+          "SportEvents_Sales_Back_End"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserEntity"
+                  }
                 }
               }
             }
@@ -71,6 +93,25 @@
   },
   "components": {
     "schemas": {
+      "UserEntity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "passwordHash": {
+            "type": "string"
+          }
+        }
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {

@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_0",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_1",
     "RelativePath": "ping",
     "HttpMethod": "GET",
     "IsController": false,
@@ -37,5 +37,23 @@
       }
     ],
     "EndpointName": "GetWeatherForecast"
+  },
+  {
+    "ContainingType": "Program\u002B\u003C\u003Ec",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_2",
+    "RelativePath": "users",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SportEvents_Sales_Back_End.Model.Entities.UserEntity, SportEvents_Sales_Back_End, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

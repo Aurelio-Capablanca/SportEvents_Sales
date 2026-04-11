@@ -16,12 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Databases\" />
-	<Folder Include="Model\" />
 	<Folder Include="Domain\" />
 	  <Folder Include="Domain\Business" />
 	  <Folder Include="Domain\Rules" />
-	<Folder Include="DTO\" />
+	<Folder Include="Model\DTO\" />
+	<Folder Include="Model\ModelDomain\" />
 	<Folder Include="Security\" />	  
   </ItemGroup>
 
