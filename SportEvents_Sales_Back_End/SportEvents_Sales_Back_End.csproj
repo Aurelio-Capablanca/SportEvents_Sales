@@ -19,9 +19,7 @@
 	<Folder Include="Domain\" />
 	  <Folder Include="Domain\Business" />
 	  <Folder Include="Domain\Rules" />
-	<Folder Include="Model\DTO\" />
-	<Folder Include="Model\ModelDomain\" />
-	<Folder Include="Security\" />	  
+	<Folder Include="Model\DTO\" />	  
   </ItemGroup>
 
 </Project>

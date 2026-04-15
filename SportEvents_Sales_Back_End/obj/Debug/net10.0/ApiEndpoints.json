@@ -1,7 +1,92 @@
 [
   {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.LoginController",
+    "Method": "Index",
+    "RelativePath": "auth",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "auth/do-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "passwordUser",
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.PasswordUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.GeneralResponse\u00601[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "do-login"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.LoginController",
+    "Method": "Friendly",
+    "RelativePath": "auth/friendly-hello",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "friendly-hello"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.LoginController",
+    "Method": "MockSaltAndHash",
+    "RelativePath": "auth/mock-hash",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NoHash",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "mock-hash"
+  },
+  {
     "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_3",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_2",
     "RelativePath": "health/db",
     "HttpMethod": "GET",
     "IsController": false,
@@ -53,23 +138,5 @@
       }
     ],
     "EndpointName": "GetWeatherForecast"
-  },
-  {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_2",
-    "RelativePath": "users",
-    "HttpMethod": "GET",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[SportEvents_Sales_Back_End.Model.Entities.UserEntity, SportEvents_Sales_Back_End, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "application/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   }
 ]

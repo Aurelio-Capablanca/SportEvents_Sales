@@ -29,28 +29,6 @@
         }
       }
     },
-    "/users": {
-      "get": {
-        "tags": [
-          "SportEvents_Sales_Back_End"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/UserEntity"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/health/db": {
       "get": {
         "tags": [
@@ -59,6 +37,136 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/auth/friendly-hello": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+        "operationId": "friendly-hello",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/mock-hash": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "operationId": "mock-hash",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/do-login": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "operationId": "do-login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordUser"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordUser"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PasswordUser"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponseOfstring"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponseOfstring"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponseOfstring"
+                }
+              }
+            }
           }
         }
       }
@@ -105,21 +213,49 @@
   },
   "components": {
     "schemas": {
-      "UserEntity": {
+      "GeneralResponseOfstring": {
         "type": "object",
         "properties": {
-          "id": {
+          "message": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "dataset": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "status": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
+              "null",
               "integer",
               "string"
             ],
             "format": "int32"
           },
-          "userName": {
+          "error": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
+      "PasswordUser": {
+        "required": [
+          "user",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "user": {
             "type": "string"
           },
-          "passwordHash": {
+          "password": {
             "type": "string"
           }
         }
@@ -160,6 +296,9 @@
   "tags": [
     {
       "name": "SportEvents_Sales_Back_End"
+    },
+    {
+      "name": "Login"
     },
     {
       "name": "WeatherForecast"

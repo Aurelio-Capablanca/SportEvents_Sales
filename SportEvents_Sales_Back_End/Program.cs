@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SportEvents_Sales_Back_End.DatabaseAccess;
+using SportEvents_Sales_Back_End.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,8 @@ builder.Services.AddOpenApi();
 //adding Entity Framework:
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("Default")));
+//sign in new Services-like classes (? - weird)
+builder.Services.AddScoped<LoginSessions>();
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
