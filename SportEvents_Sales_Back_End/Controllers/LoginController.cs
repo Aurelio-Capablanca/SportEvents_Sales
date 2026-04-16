@@ -1,10 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using SportEvents_Sales_Back_End.DatabaseAccess;
 using SportEvents_Sales_Back_End.Model.ModelDomain;
 using SportEvents_Sales_Back_End.Security;
-using System.Net.WebSockets;
-using System.Security.Cryptography;
 
 namespace SportEvents_Sales_Back_End.Controllers
 {
@@ -45,6 +43,13 @@ namespace SportEvents_Sales_Back_End.Controllers
         public async Task<GeneralResponse<String>> Login([FromBody] PasswordUser passwordUser)
         {
             return await _loginService.DoLogin(passwordUser);
+        }
+
+        [Authorize]
+        [HttpGet("authorized-tester")]
+        public String TestSecuring()
+        {
+            return "You're Authenticated ! ! !";
         }
 
     }
