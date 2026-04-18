@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/GMB+nzLOrw=",
+  "dgSpecHash": "OrpEIg/pyX0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj",
+  "projectFilePath": "C:\\Users\\aurel\\Desktop\\programming_exer\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aurel\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\aurel\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

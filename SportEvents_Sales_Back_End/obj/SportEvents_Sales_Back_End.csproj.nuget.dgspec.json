@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj": {}
+    "C:\\Users\\aurel\\Desktop\\programming_exer\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj": {
+    "C:\\Users\\aurel\\Desktop\\programming_exer\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj",
+        "projectUniqueName": "C:\\Users\\aurel\\Desktop\\programming_exer\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj",
         "projectName": "SportEvents_Sales_Back_End",
-        "projectPath": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj",
+        "projectPath": "C:\\Users\\aurel\\Desktop\\programming_exer\\SportEvents_Sales\\SportEvents_Sales_Back_End\\SportEvents_Sales_Back_End.csproj",
         "packagesPath": "C:\\Users\\aurel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\obj\\",
+        "outputPath": "C:\\Users\\aurel\\Desktop\\programming_exer\\SportEvents_Sales\\SportEvents_Sales_Back_End\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -41,6 +41,23 @@
         }
       }
     },
+    "/test-football-api": {
+      "get": {
+        "tags": [
+          "SportEvents_Sales_Back_End"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": { }
+              }
+            }
+          }
+        }
+      }
+    },
     "/auth/friendly-hello": {
       "get": {
         "tags": [
