@@ -5,6 +5,23 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
+/* 
+ Tasks list : 
+   - FrontEnd Basics (MVVC)
+        * public site
+        * private site
+   - Dual Login (Client and Admin) -> generate Roles over it (logically)
+   - CRUD's   (Ingestion -> Validation -> Persistence)
+       * Clientes  (Aurel)
+       * Tickets  + Orden (Aurel)
+       * Partidos
+       * Precios 
+       * Sedes
+       * 
+   - Test Scrapping (Aurel)
+     
+*/
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Controllers

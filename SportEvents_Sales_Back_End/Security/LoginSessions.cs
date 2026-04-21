@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SportEvents_Sales_Back_End.DatabaseAccess;
+using SportEvents_Sales_Back_End.Model.Entities;
 using SportEvents_Sales_Back_End.Model.ModelDomain;
 
 namespace SportEvents_Sales_Back_End.Security
