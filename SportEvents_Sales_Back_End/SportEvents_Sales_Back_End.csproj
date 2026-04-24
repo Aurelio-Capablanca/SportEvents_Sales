@@ -17,9 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-	<Folder Include="Domain\" />
-	  <Folder Include="Domain\Business" />
-	  <Folder Include="Domain\Rules" />
 	<Folder Include="Model\DTO\" />	  
   </ItemGroup>
 

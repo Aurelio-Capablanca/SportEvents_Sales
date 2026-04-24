@@ -27,7 +27,13 @@ namespace SportEvents_Sales_Back_End.Security
             // validate hash
             var hasher = new PasswordHasher<object>();
             var verifier = hasher.VerifyHashedPassword(null, pass_hash, passwordUser.Password);
-            if (verifier == PasswordVerificationResult.Failed) return new GeneralResponse<String> { Error = "Error in Credentials", Status = 500, Message = "User or Passwor is incorrect" };
+            if (verifier == PasswordVerificationResult.Failed)
+                return new GeneralResponse<String>
+                {
+                    Error = "Error in Credentials",
+                    Status = 500,
+                    Message = "User or Passwor is incorrect"
+                };
             // issue JWT
             var token = _issuer.GenerateToken(passwordUser.User);
             return new GeneralResponse<String> { Status = 200, Message = "Sucess!!!", Dataset = token };

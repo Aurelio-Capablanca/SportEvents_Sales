@@ -58,6 +58,56 @@
         }
       }
     },
+    "/client-api/create-client": {
+      "post": {
+        "tags": [
+          "Client"
+        ],
+        "operationId": "create-client",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientEntity"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponseOfstring"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponseOfstring"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponseOfstring"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/auth/friendly-hello": {
       "get": {
         "tags": [
@@ -259,6 +309,28 @@
   },
   "components": {
     "schemas": {
+      "ClientEntity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          }
+        }
+      },
       "GeneralResponseOfstring": {
         "type": "object",
         "properties": {
@@ -342,6 +414,9 @@
   "tags": [
     {
       "name": "SportEvents_Sales_Back_End"
+    },
+    {
+      "name": "Client"
     },
     {
       "name": "Login"

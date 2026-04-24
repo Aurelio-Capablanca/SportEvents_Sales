@@ -4,6 +4,8 @@ using SportEvents_Sales_Back_End.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using SportEvents_Sales_Back_End.Domain.Business;
+using SportEvents_Sales_Back_End.Domain.Rules;
 
 /* 
  Tasks list : 
@@ -28,13 +30,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // OpenAPI
 builder.Services.AddOpenApi();
-
 //Entity Framework
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("Default")));
-//sign in new Services-like classes (? - weird)
+//Security
 builder.Services.AddScoped<LoginSessions>();
 builder.Services.AddScoped<JWTIssuer>();
+builder.Services.AddScoped<HumanVerification>();
+//Client
+builder.Services.AddScoped<ClientLogic>();
+builder.Services.AddScoped<ClientRules>();
+//
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {

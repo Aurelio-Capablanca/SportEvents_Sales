@@ -105,6 +105,43 @@
     "EndpointName": "mock-hash"
   },
   {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.ClientController",
+    "Method": "Index",
+    "RelativePath": "client-api",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.ClientController",
+    "Method": "CreateClient",
+    "RelativePath": "client-api/create-client",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clientEntity",
+        "Type": "SportEvents_Sales_Back_End.Model.Entities.ClientEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.GeneralResponse\u00601[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "create-client"
+  },
+  {
     "ContainingType": "Program\u002B\u003C\u003Ec",
     "Method": "\u003C\u003CMain\u003E$\u003Eb__0_4",
     "RelativePath": "health/db",
