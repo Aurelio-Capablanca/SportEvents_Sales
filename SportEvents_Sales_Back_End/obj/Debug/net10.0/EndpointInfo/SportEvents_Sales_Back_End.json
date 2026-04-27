@@ -41,23 +41,6 @@
         }
       }
     },
-    "/test-football-api": {
-      "get": {
-        "tags": [
-          "SportEvents_Sales_Back_End"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": { }
-              }
-            }
-          }
-        }
-      }
-    },
     "/client-api/create-client": {
       "post": {
         "tags": [
@@ -68,17 +51,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClientEntity"
+                "$ref": "#/components/schemas/ClientRegistry"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ClientEntity"
+                "$ref": "#/components/schemas/ClientRegistry"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ClientEntity"
+                "$ref": "#/components/schemas/ClientRegistry"
               }
             }
           },
@@ -309,17 +292,9 @@
   },
   "components": {
     "schemas": {
-      "ClientEntity": {
+      "ClientRegistry": {
         "type": "object",
         "properties": {
-          "id": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
           "name": {
             "type": "string"
           },
@@ -327,6 +302,9 @@
             "type": "string"
           },
           "email": {
+            "type": "string"
+          },
+          "pass": {
             "type": "string"
           }
         }
@@ -375,6 +353,9 @@
           },
           "password": {
             "type": "string"
+          },
+          "isAdmin": {
+            "type": "boolean"
           }
         }
       },

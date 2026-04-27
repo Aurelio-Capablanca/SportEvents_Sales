@@ -6,7 +6,7 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
     public class AppDbContext : DbContext
     {
         public DbSet<UserEntity> Users => Set<UserEntity>();
-        public DbSet<ClientEntity> Clients => Set<ClientEntity>();  
+        public DbSet<ClientEntity> Clients => Set<ClientEntity>();
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -21,9 +21,11 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.Property(e => e.PasswordHash).HasColumnName("clave_admin");
             });
 
-            modelBuilder.Entity<ClientEntity>(entity => {
+            modelBuilder.Entity<ClientEntity>(entity =>
+            {
                 entity.ToTable("cliente");
                 entity.HasKey(k => k.Id);
+                entity.Property(k => k.Id).HasColumnName("id_cliente");
                 entity.Property(k => k.Name).HasColumnName("nombre_cliente");
                 entity.Property(k => k.LastName).HasColumnName("apellido_cliente");
                 entity.Property(k => k.Email).HasColumnName("correo_cliente");

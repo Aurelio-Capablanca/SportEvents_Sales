@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SportEvents_Sales_Back_End.Model.ModelDomain;
 using SportEvents_Sales_Back_End.Security;
+using System.Diagnostics;
 
 namespace SportEvents_Sales_Back_End.Controllers
 {
@@ -12,10 +13,12 @@ namespace SportEvents_Sales_Back_End.Controllers
     {
 
         private readonly LoginSessions _loginService;
+        private readonly GlobalSession _session;
 
-        public LoginController(LoginSessions loginService)
+        public LoginController(LoginSessions loginService, IUserSessionProvider provider)
         {
             _loginService = loginService;
+            _session = provider.GetSession();
         }
 
         public IActionResult Index()
@@ -48,8 +51,8 @@ namespace SportEvents_Sales_Back_End.Controllers
         [Authorize]
         [HttpGet("authorized-tester")]
         public String TestSecuring()
-        {
-            return "You're Authenticated ! ! !";
+        {            
+            return $"You're Authenticated ! ! ! {_session.Email} {_session.Role}";
         }
 
     }

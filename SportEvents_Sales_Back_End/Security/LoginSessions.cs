@@ -20,9 +20,20 @@ namespace SportEvents_Sales_Back_End.Security
         public async Task<GeneralResponse<String>> DoLogin(PasswordUser passwordUser)
         {
             // find password_hash by username
-            string? pass_hash = await _context.Users.Where(ad => ad.UserName == passwordUser.User)
+            string? pass_hash;
+            if (passwordUser.IsAdmin)
+            {
+                pass_hash = await _context.Users.Where(ad => ad.UserName == passwordUser.User)
                 .Select(ad => ad.PasswordHash)
                 .FirstOrDefaultAsync();
+            }
+            else
+            {
+                pass_hash = await _context.Clients.Where(ad => ad.Email == passwordUser.User)
+                .Select(ad => ad.Pass)
+                .FirstOrDefaultAsync();
+            }
+            
             if (pass_hash == null) return new GeneralResponse<String> { Error = "Error in Credentials", Status = 500, Message = "User or Passwor is incorrect" };
             // validate hash
             var hasher = new PasswordHasher<object>();
@@ -35,7 +46,7 @@ namespace SportEvents_Sales_Back_End.Security
                     Message = "User or Passwor is incorrect"
                 };
             // issue JWT
-            var token = _issuer.GenerateToken(passwordUser.User);
+            var token = _issuer.GenerateToken(passwordUser);
             return new GeneralResponse<String> { Status = 200, Message = "Sucess!!!", Dataset = token };
         }
 

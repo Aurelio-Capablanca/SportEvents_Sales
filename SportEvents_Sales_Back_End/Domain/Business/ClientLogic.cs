@@ -16,6 +16,8 @@ namespace SportEvents_Sales_Back_End.Domain.Business
 
         public async Task<GeneralResponse<string>> SaveClientAsync(ClientRegistry client)
         {
+
+            //do validation before sending it to DB
             try
             {
                 var hasher = new PasswordHasher<object>();

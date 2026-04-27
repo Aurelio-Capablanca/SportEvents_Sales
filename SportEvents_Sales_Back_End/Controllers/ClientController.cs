@@ -23,7 +23,7 @@ namespace SportEvents_Sales_Back_End.Controllers
         }
 
 
-        [Authorize]
+        //[Authorize]
         [HttpPost("create-client", Name = "create-client")]
         public async Task<GeneralResponse<String>> CreateClient([FromBody] ClientRegistry clientEntity) 
         {

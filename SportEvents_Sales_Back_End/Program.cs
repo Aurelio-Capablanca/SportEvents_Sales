@@ -37,10 +37,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
 builder.Services.AddScoped<LoginSessions>();
 builder.Services.AddScoped<JWTIssuer>();
 builder.Services.AddScoped<HumanVerification>();
-//Client
-builder.Services.AddScoped<ClientLogic>();
-builder.Services.AddScoped<ClientRules>();
-//
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -57,17 +54,22 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             )
         };
     });
-
-
+builder.Services.AddScoped<IUserSessionProvider, SessionProvider>();
+//Client
+builder.Services.AddScoped<ClientLogic>();
+builder.Services.AddScoped<ClientRules>();
+//
+/*
 builder.Services.AddHttpClient("FootballAPI", client =>
 {
     client.BaseAddress = new Uri("http://v3.football.api-sports.io/leagues");
     client.DefaultRequestHeaders.Add("x-apisports-key","a8212fb496bf6d2fae8cbde9351cfr153");
 });
-
+*/
 
 
 builder.Services.AddAuthorization();
+
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -82,13 +84,14 @@ app.MapGet("/health/db", async (AppDbContext db) =>
     var ok = await db.Database.CanConnectAsync();
     return ok ? Results.Ok("DB OK") : Results.Problem("DB FAIL");
 });
-
+/*
 app.MapGet("/test-football-api", async (IHttpClientFactory factory) =>
 {
     var client = factory.CreateClient("FootballAPI");
     var response = await client.GetFromJsonAsync<dynamic>("/fixtures?league=299&season=2026");
     return Results.Ok(response);
 });
+*/
 
 app.UseAuthentication();
 app.UseAuthorization();

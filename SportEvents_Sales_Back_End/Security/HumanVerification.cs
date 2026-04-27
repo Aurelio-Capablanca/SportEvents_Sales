@@ -8,7 +8,7 @@ namespace SportEvents_Sales_Back_End.Security
 
         public GeneralResponse<String> Verification()
         {
-            //do HMAC
+            //do HMAC (?)
             return null;
         }
 
