@@ -15,7 +15,7 @@ using SportEvents_Sales_Back_End.Domain.Rules;
    - Dual Login (Client and Admin) -> generate Roles over it (logically)
    - CRUD's   (Ingestion -> Validation -> Persistence)
        * Clientes  (Aurel)
-       * Tickets  + Orden (Aurel)
+       * Tickets  + Orden (Aurel) 
        * Partidos
        * Precios 
        * Sedes
@@ -58,16 +58,6 @@ builder.Services.AddScoped<IUserSessionProvider, SessionProvider>();
 //Client
 builder.Services.AddScoped<ClientLogic>();
 builder.Services.AddScoped<ClientRules>();
-//
-/*
-builder.Services.AddHttpClient("FootballAPI", client =>
-{
-    client.BaseAddress = new Uri("http://v3.football.api-sports.io/leagues");
-    client.DefaultRequestHeaders.Add("x-apisports-key","a8212fb496bf6d2fae8cbde9351cfr153");
-});
-*/
-
-
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
@@ -76,22 +66,15 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+//ping tester
 app.MapGet("/ping", () => "pong");
-
 //test DB connectivity
 app.MapGet("/health/db", async (AppDbContext db) =>
 {
     var ok = await db.Database.CanConnectAsync();
     return ok ? Results.Ok("DB OK") : Results.Problem("DB FAIL");
 });
-/*
-app.MapGet("/test-football-api", async (IHttpClientFactory factory) =>
-{
-    var client = factory.CreateClient("FootballAPI");
-    var response = await client.GetFromJsonAsync<dynamic>("/fixtures?league=299&season=2026");
-    return Results.Ok(response);
-});
-*/
+
 
 app.UseAuthentication();
 app.UseAuthorization();

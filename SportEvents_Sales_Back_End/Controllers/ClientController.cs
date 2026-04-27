@@ -17,14 +17,8 @@ namespace SportEvents_Sales_Back_End.Controllers
             this._clientLogic = clientLogic;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-
         //[Authorize]
-        [HttpPost("create-client", Name = "create-client")]
+        [HttpPost("save-client", Name = "save-client")]
         public async Task<GeneralResponse<String>> CreateClient([FromBody] ClientRegistry clientEntity) 
         {
             return await this._clientLogic.SaveClientAsync(clientEntity);

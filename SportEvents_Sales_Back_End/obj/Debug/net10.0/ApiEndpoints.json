@@ -106,16 +106,6 @@
   },
   {
     "ContainingType": "SportEvents_Sales_Back_End.Controllers.ClientController",
-    "Method": "Index",
-    "RelativePath": "client-api",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SportEvents_Sales_Back_End.Controllers.ClientController",
     "Method": "CreateClient",
     "RelativePath": "client-api/create-client",
     "HttpMethod": "POST",
