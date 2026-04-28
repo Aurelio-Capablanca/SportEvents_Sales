@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using SportEvents_Sales_Back_End.DatabaseAccess;
 using SportEvents_Sales_Back_End.Model.Entities;
 using SportEvents_Sales_Back_End.Model.ModelDomain;
@@ -23,13 +24,13 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 var hasher = new PasswordHasher<object>();
                 ClientEntity registrator;
                 if (client.Idclient != null)
-                {                    
+                {
                     registrator = new ClientEntity
                     {
                         Id = client.Idclient ?? 0,
                         Name = client.Name,
                         LastName = client.LastName,
-                        Email = client.Email,                        
+                        Email = client.Email,
                     };
                     _context.Clients.Update(registrator);
                     await _context.SaveChangesAsync();
@@ -40,7 +41,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
 
                     };
                 }
-                else 
+                else
                 {
                     registrator = new ClientEntity
                     {
@@ -71,7 +72,38 @@ namespace SportEvents_Sales_Back_End.Domain.Business
             }
 
         }
-     
+
+        public async Task<GeneralResponse<ClientRegistry>> OwnDetails(String email)
+        {
+            try
+            {
+                var client = await _context.Clients.Where(cl => cl.Email == email).FirstAsync();
+                var registry = new ClientRegistry
+                {
+                    Idclient = client.Id,
+                    Name = client.Name,
+                    LastName = client.LastName,
+                    Email = client.Email
+                };
+                return new GeneralResponse<ClientRegistry>
+                {
+                    Dataset = registry,
+                    Message = "OK",
+                    Status = 200,
+                    
+                };
+            }
+            catch (Exception ex)
+            {
+                return new GeneralResponse<ClientRegistry>
+                {
+                    Dataset = null,
+                    Message = $"Error {ex.Message}",
+                    Status = 500
+
+                };
+            }
+        }
 
     }
 }
