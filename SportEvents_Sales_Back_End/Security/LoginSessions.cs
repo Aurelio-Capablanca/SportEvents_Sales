@@ -23,13 +23,15 @@ namespace SportEvents_Sales_Back_End.Security
             string? pass_hash;
             if (passwordUser.IsAdmin)
             {
-                pass_hash = await _context.Users.Where(ad => ad.UserName == passwordUser.User)
+                pass_hash = await _context.Users
+                .Where(ad => ad.UserName == passwordUser.User)
                 .Select(ad => ad.PasswordHash)
                 .FirstOrDefaultAsync();
             }
             else
             {
-                pass_hash = await _context.Clients.Where(ad => ad.Email == passwordUser.User)
+                pass_hash = await _context.Clients
+                .Where(ad => ad.Email == passwordUser.User)
                 .Select(ad => ad.Pass)
                 .FirstOrDefaultAsync();
             }

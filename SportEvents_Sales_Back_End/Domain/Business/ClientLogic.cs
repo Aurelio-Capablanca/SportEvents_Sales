@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Win32;
 using SportEvents_Sales_Back_End.DatabaseAccess;
 using SportEvents_Sales_Back_End.Model.Entities;
 using SportEvents_Sales_Back_End.Model.ModelDomain;
+using System.Data;
 using System.Diagnostics;
 
 namespace SportEvents_Sales_Back_End.Domain.Business
@@ -25,12 +27,17 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 ClientEntity registrator;
                 if (client.Idclient != null)
                 {
+                    var CurrentClient = await _context.Clients
+                        .Where(cl => cl.Email == client.Email)
+                        .Select(cl => cl.Pass)
+                        .FirstAsync();
                     registrator = new ClientEntity
                     {
                         Id = client.Idclient ?? 0,
                         Name = client.Name,
                         LastName = client.LastName,
                         Email = client.Email,
+                        Pass = CurrentClient,
                     };
                     _context.Clients.Update(registrator);
                     await _context.SaveChangesAsync();
@@ -90,7 +97,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                     Dataset = registry,
                     Message = "OK",
                     Status = 200,
-                    
+
                 };
             }
             catch (Exception ex)
@@ -103,6 +110,34 @@ namespace SportEvents_Sales_Back_End.Domain.Business
 
                 };
             }
+        }
+
+
+        public async Task<GeneralResponse<String>> DeleteAccount(String Email)
+        {
+            try
+            {
+                var CurrentClient = await _context
+                    .Clients
+                    .Where(cl => cl.Email == Email)
+                    .FirstAsync();
+                _context.Clients.Remove(CurrentClient);
+                return new GeneralResponse<String>
+                {
+                    Message = "Succesfull Delete",
+                    Status = 200,
+
+                };
+            }
+            catch (Exception ex)
+            {
+                return new GeneralResponse<String>
+                {                    
+                    Message = $"Error {ex.Message}",
+                    Status = 500
+
+                };
+            }            
         }
 
     }
