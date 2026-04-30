@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.5.11716.220 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportEvents_Sales_Front_End", "SportEvents_Sales_Front_End.csproj", "{F4F648D3-2BD2-4D56-9901-5F5C50001BEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4F648D3-2BD2-4D56-9901-5F5C50001BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F648D3-2BD2-4D56-9901-5F5C50001BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F648D3-2BD2-4D56-9901-5F5C50001BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F648D3-2BD2-4D56-9901-5F5C50001BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75775328-FDF7-49EC-9755-CD91A5179A6E}
+	EndGlobalSection
+EndGlobal
