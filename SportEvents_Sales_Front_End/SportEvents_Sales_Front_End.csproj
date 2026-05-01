@@ -178,6 +178,9 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="View\Private\AdminLogin.aspx" />
+    <Content Include="View\Private\Dashboard.aspx" />
+    <Content Include="View\Private\TemplateCRUD.aspx" />
     <Content Include="View\Public\LoginPublic.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -232,12 +235,33 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="View\Private\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Private\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Private\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Private\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\Private\SportSiteMaster.Master.cs">
       <DependentUpon>SportSiteMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\Private\SportSiteMaster.Master.designer.cs">
       <DependentUpon>SportSiteMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\Private\TemplateCRUD.aspx.cs">
+      <DependentUpon>TemplateCRUD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Private\TemplateCRUD.aspx.designer.cs">
+      <DependentUpon>TemplateCRUD.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Public\LoginPublic.aspx.cs">
       <DependentUpon>LoginPublic.aspx</DependentUpon>
