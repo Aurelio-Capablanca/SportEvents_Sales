@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\domain\\business\\clientlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:domain\\business\\clientlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\security\\loginsessions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:security\\loginsessions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\modeldomain\\passworduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\modeldomain\\passworduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\modeldomain\\clientregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\modeldomain\\clientregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\modeldomain\\globalsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\modeldomain\\globalsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\domain\\business\\clientlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:domain\\business\\clientlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\cliententity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,20 +39,12 @@
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:security\\jwtissuer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\modeldomain\\globalsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\modeldomain\\globalsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\modeldomain\\passworduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\modeldomain\\passworduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\databaseaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,12 +57,12 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 275,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 363,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -71,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\DatabaseAccess\\AppDbContext.cs",
               "RelativeDocumentMoniker": "DatabaseAccess\\AppDbContext.cs",
@@ -83,37 +87,64 @@
               "IsPinned": true
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginSessions.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Security\\LoginSessions.cs",
-              "RelativeDocumentMoniker": "Security\\LoginSessions.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Security\\LoginSessions.cs",
-              "RelativeToolTip": "Security\\LoginSessions.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wBoAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T04:41:27.164Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\UserEntity.cs",
+              "RelativeDocumentMoniker": "Model\\Entities\\UserEntity.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\UserEntity.cs",
+              "RelativeToolTip": "Model\\Entities\\UserEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T04:24:53.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientRegistry.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\ClientRegistry.cs",
+              "RelativeDocumentMoniker": "Model\\ModelDomain\\ClientRegistry.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\ClientRegistry.cs",
+              "RelativeToolTip": "Model\\ModelDomain\\ClientRegistry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T02:02:01.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginSessions.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Security\\LoginSessions.cs",
+              "RelativeDocumentMoniker": "Security\\LoginSessions.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Security\\LoginSessions.cs",
+              "RelativeToolTip": "Security\\LoginSessions.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T04:41:27.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "GlobalSession.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\GlobalSession.cs",
               "RelativeDocumentMoniker": "Model\\ModelDomain\\GlobalSession.cs",
               "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\GlobalSession.cs",
               "RelativeToolTip": "Model\\ModelDomain\\GlobalSession.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-26T21:09:57.462Z"
+              "WhenOpened": "2026-04-26T21:09:57.462Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "ClientController.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\ClientController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClientController.cs",
@@ -121,42 +152,43 @@
               "RelativeToolTip": "Controllers\\ClientController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAQwB8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T03:31:40.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T03:31:40.432Z"
             }
           ]
         },
         {
-          "DockedWidth": 497,
-          "SelectedChildIndex": 3,
+          "DockedWidth": 146,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T03:14:52.057Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "JWTIssuer.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Security\\JWTIssuer.cs",
-              "RelativeDocumentMoniker": "Security\\JWTIssuer.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Security\\JWTIssuer.cs",
-              "RelativeToolTip": "Security\\JWTIssuer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAaAAAAAAAAAA==",
+              "Title": "ClientLogic.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\ClientLogic.cs",
+              "RelativeDocumentMoniker": "Domain\\Business\\ClientLogic.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\ClientLogic.cs",
+              "RelativeToolTip": "Domain\\Business\\ClientLogic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T02:41:31.448Z"
+              "WhenOpened": "2026-04-27T02:00:09.614Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "PasswordUser.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\PasswordUser.cs",
+              "RelativeDocumentMoniker": "Model\\ModelDomain\\PasswordUser.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\PasswordUser.cs",
+              "RelativeToolTip": "Model\\ModelDomain\\PasswordUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T22:48:47.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ClientEntity.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\ClientEntity.cs",
               "RelativeDocumentMoniker": "Model\\Entities\\ClientEntity.cs",
@@ -168,47 +200,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClientLogic.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\ClientLogic.cs",
-              "RelativeDocumentMoniker": "Domain\\Business\\ClientLogic.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\ClientLogic.cs",
-              "RelativeToolTip": "Domain\\Business\\ClientLogic.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA5wIsAAAANAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "JWTIssuer.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Security\\JWTIssuer.cs",
+              "RelativeDocumentMoniker": "Security\\JWTIssuer.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Security\\JWTIssuer.cs",
+              "RelativeToolTip": "Security\\JWTIssuer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T02:00:09.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T02:41:31.448Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "PasswordUser.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\PasswordUser.cs",
-              "RelativeDocumentMoniker": "Model\\ModelDomain\\PasswordUser.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\PasswordUser.cs",
-              "RelativeToolTip": "Model\\ModelDomain\\PasswordUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-26T22:48:47.663Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 28,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClientRegistry.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\ClientRegistry.cs",
-              "RelativeDocumentMoniker": "Model\\ModelDomain\\ClientRegistry.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\ClientRegistry.cs",
-              "RelativeToolTip": "Model\\ModelDomain\\ClientRegistry.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAA6wAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T02:02:01.717Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-28T03:14:52.057Z"
             }
           ]
         }

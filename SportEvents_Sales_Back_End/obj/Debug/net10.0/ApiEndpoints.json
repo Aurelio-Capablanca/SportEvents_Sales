@@ -106,8 +106,29 @@
   },
   {
     "ContainingType": "SportEvents_Sales_Back_End.Controllers.ClientController",
+    "Method": "GetDetails",
+    "RelativePath": "client-api/get-own-details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.GeneralResponse\u00601[[SportEvents_Sales_Back_End.Model.ModelDomain.ClientRegistry, SportEvents_Sales_Back_End, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "get-own-details"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.ClientController",
     "Method": "CreateClient",
-    "RelativePath": "client-api/create-client",
+    "RelativePath": "client-api/save-client",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -129,7 +150,7 @@
         "StatusCode": 200
       }
     ],
-    "EndpointName": "create-client"
+    "EndpointName": "save-client"
   },
   {
     "ContainingType": "Program\u002B\u003C\u003Ec",

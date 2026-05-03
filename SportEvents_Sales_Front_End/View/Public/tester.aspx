@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginPublic.aspx.cs" Inherits="SportEvents_Sales_Front_End.View.Public.LoginPublic" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="tester.aspx.cs" Inherits="SportEvents_Sales_Front_End.View.Public.LoginPublic" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,10 +68,7 @@
         </div>
     </div>
 
-    <!-- Login Page (Modal) -->
-
-
-    <!-- Modal Login Template -->
+    <!-- Login Page (Modal) -->    
     <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -89,7 +86,7 @@
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="password" required>
                         </div>
-                        <button type="button" class="btn btn-primary">Login</button>
+                        <button type="button" class="btn btn-primary" id="login_trigger">Login</button>
                     </form>
                 </div>
             </div>

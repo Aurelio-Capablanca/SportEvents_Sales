@@ -41,12 +41,12 @@
         }
       }
     },
-    "/client-api/create-client": {
+    "/client-api/save-client": {
       "post": {
         "tags": [
           "Client"
         ],
-        "operationId": "create-client",
+        "operationId": "save-client",
         "requestBody": {
           "content": {
             "application/json": {
@@ -84,6 +84,36 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GeneralResponseOfstring"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/client-api/get-own-details": {
+      "get": {
+        "tags": [
+          "Client"
+        ],
+        "operationId": "get-own-details",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponseOfClientRegistry"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponseOfClientRegistry"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeneralResponseOfClientRegistry"
                 }
               }
             }
@@ -315,6 +345,42 @@
           },
           "pass": {
             "type": "string"
+          }
+        }
+      },
+      "GeneralResponseOfClientRegistry": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "dataset": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/ClientRegistry"
+              }
+            ]
+          },
+          "status": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "error": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },
