@@ -19,7 +19,7 @@ namespace SportEvents_Sales_Front_End.View.Public
 
         }
 
-        protected async Task LoginButton_Click(object sender, EventArgs e)
+        protected void LoginButton_Click(object sender, EventArgs e)
         {
             var email = txtEmail.Text;
             var pass = txtPassword.Text;
@@ -37,19 +37,28 @@ namespace SportEvents_Sales_Front_End.View.Public
                     };
                     string json = JsonConvert.SerializeObject(auth);
                     var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
+
+                    // Use .Result to wait synchronously
                     HttpResponseMessage response = client.PostAsync(url, content).Result;
+
                     if (response.IsSuccessStatusCode)
                     {
-
-                        string result = await response.Content.ReadAsStringAsync();
-                        lblLoginMessage.Text = result;
-                        Debug.WriteLine(result);
+                        string result = response.Content.ReadAsStringAsync().Result;
+                        lblLoginMessage.Text = "Login successful: " + result;
+                        lblLoginMessage.ForeColor = System.Drawing.Color.Green;
+                        Debug.WriteLine("Success: " + result);
+                    }
+                    else
+                    {
+                        lblLoginMessage.Text = "Login failed: " + response.StatusCode;
+                        lblLoginMessage.ForeColor = System.Drawing.Color.Red;
                     }
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine("Error "+ex.Message);
-                    throw ex;
+                    lblLoginMessage.Text = "Error: " + ex.Message;
+                    lblLoginMessage.ForeColor = System.Drawing.Color.Red;
+                    Debug.WriteLine("Exception: " + ex.InnerException?.Message ?? ex.Message);
                 }
             }
         }
