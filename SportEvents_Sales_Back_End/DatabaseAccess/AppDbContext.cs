@@ -7,6 +7,7 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
     {
         public DbSet<UserEntity> Users => Set<UserEntity>();
         public DbSet<ClientEntity> Clients => Set<ClientEntity>();
+        public DbSet<OrderEntity> Orders => Set<OrderEntity>();
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -30,6 +31,18 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.Property(k => k.LastName).HasColumnName("apellido_cliente");
                 entity.Property(k => k.Email).HasColumnName("correo_cliente");
                 entity.Property(k => k.Pass).HasColumnName("clave_cliente");
+            });
+
+            modelBuilder.Entity<OrderEntity>(entity =>
+            {
+                entity.ToTable("ordenes");
+                entity.HasKey(o => o.Id);
+                entity.Property(o => o.Status).HasColumnName("status");
+                entity.Property(o => o.DateStart).HasColumnName("datetime_start");
+                entity.Property(o => o.DateEnd).HasColumnName("datetime_close");
+                entity.Property(o => o.IdClient).HasColumnName("id_cliente");
+                entity.Property(o => o.SubTotal).HasColumnName("sub_total");
+                entity.Property(o => o.TotalPrice).HasColumnName("total_price");
             });
         }
 
