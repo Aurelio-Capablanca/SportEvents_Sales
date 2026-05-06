@@ -70,7 +70,7 @@ const login = async () => {
     } catch (error) {
         // Network error or other issue
         console.error('Login error:', error)
-        message.value = 'Error: ' + (error.response?.data?.message || error.message || 'Network error')
+        message.value = 'Error: ' + (error.response?.data?.message || error.message /*|| 'Network error'*/)
         messageType.value = 'error'
     } finally {
         // Always hide loading state
