@@ -54,6 +54,15 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             )
         };
     });
+
+builder.Services.AddCors(option =>
+{
+    option.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    });
+});
+
 builder.Services.AddScoped<IUserSessionProvider, SessionProvider>();
 //Client
 builder.Services.AddScoped<ClientLogic>();
@@ -61,6 +70,7 @@ builder.Services.AddScoped<ClientRules>();
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
+app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
