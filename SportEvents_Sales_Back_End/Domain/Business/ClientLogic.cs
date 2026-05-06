@@ -28,7 +28,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 if (client.Idclient != null)
                 {
                     var CurrentClient = await _context.Clients
-                        .Where(cl => cl.Email == client.Email)
+                        .Where(cl => cl.Id == client.Idclient)
                         .Select(cl => cl.Pass)
                         .FirstAsync();
                     registrator = new ClientEntity
