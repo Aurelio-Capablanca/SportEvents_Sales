@@ -9,7 +9,10 @@
         public DateTime DateEnd { get; set; }
         public int IdClient { get; set; }   
         public decimal SubTotal { get; set; }
-        public decimal TotalPrice { get; set; }
+        public decimal TotalPrice { get; set; }  
+
+
+
 
     }
 }
