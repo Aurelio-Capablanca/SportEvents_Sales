@@ -22,7 +22,7 @@ namespace SportEvents_Sales_Back_End.Controllers
             this._session = provider.GetSession();
         }
 
-        //[Authorize]
+        //[Authorize] -- do a duplicated required Authorization
         [HttpPost("save-client", Name = "save-client")]
         public async Task<GeneralResponse<String>> CreateClient([FromBody] ClientRegistry clientEntity)
         {

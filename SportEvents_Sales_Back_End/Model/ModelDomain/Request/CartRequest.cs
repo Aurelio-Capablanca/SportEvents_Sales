@@ -3,7 +3,9 @@
     public class CartRequest
     {
         public int IdTicket { get; set; }
-        public int IdOrder { get; set; }
+        public decimal Price { get; set; }
+        public decimal Discount { get; set; }
+        public int? IdOrder { get; set; }
 
 
     }

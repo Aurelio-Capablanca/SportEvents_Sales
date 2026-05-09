@@ -16,7 +16,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
 
         public ClientLogic(AppDbContext context)
         {
-            _context = context;
+            this._context = context;
         }
 
         public async Task<GeneralResponse<string>> SaveClientAsync(ClientRegistry client)

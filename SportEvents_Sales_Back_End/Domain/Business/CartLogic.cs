@@ -1,35 +1,23 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SportEvents_Sales_Back_End.DatabaseAccess;
+using SportEvents_Sales_Back_End.Model.Entities;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Domain;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Request;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Response;
 
 namespace SportEvents_Sales_Back_End.Domain.Business
 {
-
-    /*
-     + SaveCartAsync(CartReq model) -> Task<GeneralResponse<String>> 
-
-
-    //+  -> Task<GeneralResponse<List<>>> 
-
-    
-    /* accept other args via generics and use Pattern Matching on it */
-
-    //+ 
-    //+ 
-
-    //+ CartCheckOut(Integer IdCart) -> Task<GeneralResponse<OrderDTO>>     
-
     public class CartLogic
     {
 
-        private DbContext _dbContext;
+        private readonly AppDbContext _context;
 
-        public CartLogic(DbContext dbContext)
+        public CartLogic(AppDbContext dbContext)
         {
             this._dbContext = dbContext;
         }
 
-        public Task<GeneralResponse<CartResponse>> SaveCartAsync(CartRequest request)
+        public async Task<GeneralResponse<CartResponse>> SaveCartAsync(CartRequest request, GlobalSession session)
         {
 
             /*
@@ -39,10 +27,23 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 UPDATE TICKET (total_tickets =-1) 
                 }
             */
+            if (request.IdOrder != null) 
+            {
+                var CurrentClient = await _context.Clients
+                       .Where(cl => cl.Email == session.Email)
+                       .Select(cl => cl.Id)
+                       .FirstAsync();
+                var order = new OrderEntity
+                {
+                    Status = true,
+                    DateStart = DateTime.Now,
+                    IdClient = CurrentClient,
+                };
+            }
             return null;
         }
 
-        public Task<GeneralResponse<List<CartResponse>>> ReadCartAsync(String EmailClient)
+        public async Task<GeneralResponse<List<CartResponse>>> ReadCartAsync(String EmailClient)
         {
             return null;
         }
@@ -50,7 +51,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
 
         //+ ReadClientByArgument(T id) -> Task<GeneralResponse<DomainModel>>
 
-        public Task<GeneralResponse<String>> DeleteFromCartAsync(CartRequest request)
+        public async Task<GeneralResponse<String>> DeleteFromCartAsync(CartRequest request)
         {
             /*
                 DB -> {
@@ -61,7 +62,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
             return null;
         }
 
-        public Task<GeneralResponse<String>> DeleteAllCartAsync(int IdCart)
+        public async Task<GeneralResponse<String>> DeleteAllCartAsync(int IdCart)
         {
             /*
                 DB -> {
@@ -70,7 +71,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 }
             */
             return null;
-        }        
+        }
 
 
 

@@ -82,6 +82,9 @@ builder.Services.AddScoped<IUserSessionProvider, SessionProvider>();
 //Client
 builder.Services.AddScoped<ClientLogic>();
 builder.Services.AddScoped<ClientRules>();
+//Cart 
+builder.Services.AddScoped<CartLogic>();
+
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
