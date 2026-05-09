@@ -1,5 +1,6 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using SportEvents_Sales_Back_End.Model.ModelDomain;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Domain;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Request;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;

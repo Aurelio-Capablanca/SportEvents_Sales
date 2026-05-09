@@ -1,4 +1,4 @@
-﻿namespace SportEvents_Sales_Back_End.Model.ModelDomain
+﻿namespace SportEvents_Sales_Back_End.Model.ModelDomain.Domain
 {
 
     public enum Roles { 

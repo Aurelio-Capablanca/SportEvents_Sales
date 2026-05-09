@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using SportEvents_Sales_Back_End.Domain.Business;
 using SportEvents_Sales_Back_End.Model.Entities;
-using SportEvents_Sales_Back_End.Model.ModelDomain;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Domain;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Request;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Response;
 using SportEvents_Sales_Back_End.Security;
 
 namespace SportEvents_Sales_Back_End.Controllers

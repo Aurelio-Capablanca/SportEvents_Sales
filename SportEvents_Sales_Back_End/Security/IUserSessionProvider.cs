@@ -1,4 +1,4 @@
-﻿using SportEvents_Sales_Back_End.Model.ModelDomain;
+﻿using SportEvents_Sales_Back_End.Model.ModelDomain.Domain;
 using System.Diagnostics;
 using System.Security.Claims;
 

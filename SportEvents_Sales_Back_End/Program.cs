@@ -21,6 +21,21 @@ using SportEvents_Sales_Back_End.Domain.Rules;
        * Sedes
        * 
    - Test Scrapping (Aurel)
+
+Working now! 
+ -- Selling API 
+
+Implement :
+[HttpPost]
+public IActionResult CreateUser([FromBody] User user)
+{
+    if (user == null) return BadRequest();
+
+    _repository.Save(user);
+    
+    // Equivalent to ResponseEntity.created(uri).body(user)
+    return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+}
      
 */
 

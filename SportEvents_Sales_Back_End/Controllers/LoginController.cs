@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using SportEvents_Sales_Back_End.Model.ModelDomain;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Domain;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Request;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Response;
 using SportEvents_Sales_Back_End.Security;
 using System.Diagnostics;
 

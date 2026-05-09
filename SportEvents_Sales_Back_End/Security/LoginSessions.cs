@@ -2,7 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using SportEvents_Sales_Back_End.DatabaseAccess;
 using SportEvents_Sales_Back_End.Model.Entities;
-using SportEvents_Sales_Back_End.Model.ModelDomain;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Request;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Response;
 
 namespace SportEvents_Sales_Back_End.Security
 {
