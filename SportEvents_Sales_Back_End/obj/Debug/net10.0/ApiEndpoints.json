@@ -39,13 +39,13 @@
     "Parameters": [
       {
         "Name": "passwordUser",
-        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.PasswordUser",
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.Request.PasswordUser",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.GeneralResponse\u00601[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.Response.GeneralResponse\u00601[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -105,6 +105,23 @@
     "EndpointName": "mock-hash"
   },
   {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.CartController",
+    "Method": "SaveCartAsync",
+    "RelativePath": "cart-api/save-cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.Request.CartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "save-cart"
+  },
+  {
     "ContainingType": "SportEvents_Sales_Back_End.Controllers.ClientController",
     "Method": "GetDetails",
     "RelativePath": "client-api/get-own-details",
@@ -114,7 +131,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.GeneralResponse\u00601[[SportEvents_Sales_Back_End.Model.ModelDomain.ClientRegistry, SportEvents_Sales_Back_End, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.Response.GeneralResponse\u00601[[SportEvents_Sales_Back_End.Model.ModelDomain.Request.ClientRegistry, SportEvents_Sales_Back_End, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -135,13 +152,13 @@
     "Parameters": [
       {
         "Name": "clientEntity",
-        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.ClientRegistry",
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.Request.ClientRegistry",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.GeneralResponse\u00601[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.Response.GeneralResponse\u00601[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
