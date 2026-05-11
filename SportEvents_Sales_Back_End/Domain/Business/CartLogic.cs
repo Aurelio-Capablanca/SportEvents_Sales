@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using Azure.Core;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SportEvents_Sales_Back_End.DatabaseAccess;
@@ -8,6 +9,7 @@ using SportEvents_Sales_Back_End.Model.ModelDomain.Domain;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Request;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Response;
 using System.Diagnostics;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace SportEvents_Sales_Back_End.Domain.Business
 {
@@ -41,7 +43,6 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         Status = true,
                         DateStart = DateTime.Now,
                         IdClient = CurrentClient,
-                        SubTotal = 0,
                         TotalPrice = totalForOrder,
                     };
                     await _context.Orders.AddAsync(order);
@@ -85,43 +86,117 @@ namespace SportEvents_Sales_Back_End.Domain.Business
             }
         }
 
-        public async Task<GeneralResponse<List<CartResponse>>> ReadCartAsync(String EmailClient)
+        public async Task<GeneralResponse<CartResponse>> ReadCartAsync(String EmailClient)
         {
-            var tickets = await _context.Tickets
-            .Select(t => new TicketDTO
+            try
             {
-                Id = t.IDTicket,
-                AvailableSeats = t.AvailableTotal,
-                Discount = t.Discount,
-                ZonePrice = t.ZonePrice.ZoneName,
-                Price = t.ZonePrice.Price,
-                Stadium = t.Game.Stadium.Name,
-                LocalTeam = t.Game.LocalTeam,
-                VisitorTeam = t.Game.VisitorTeam,
-                Location = t.Game.Stadium.Location,
-                SolePrice = t.SolePrice,
-                TotalPrice = t.TotalPrice,
-            })
-            .ToListAsync();
 
-            return null;
+                var tickets = await _context.TicketOrder
+                    .Where(ot => ot.Order.Client.Email == EmailClient)
+                    .Select(ot => new TicketDTO
+                    {
+                        Id = ot.Tickets.IDTicket,
+                        AvailableSeats = ot.Tickets.AvailableTotal,
+                        Discount = ot.Tickets.Discount,
+                        ZonePrice = ot.Tickets.ZonePrice.ZoneName,
+                        Price = ot.Tickets.ZonePrice.Price,
+                        Stadium = ot.Tickets.Game.Stadium.Name,
+                        LocalTeam = ot.Tickets.Game.LocalTeam,
+                        VisitorTeam = ot.Tickets.Game.VisitorTeam,
+                        Location = ot.Tickets.Game.Stadium.Location,
+                        SolePrice = ot.Tickets.SolePrice,
+                        TotalPrice = ot.Tickets.TotalPrice,
+                    })
+                    .ToListAsync();
+                var order = await _context.Orders.Where(or => or.Client.Email == EmailClient && or.Status).FirstAsync();
+                CartResponse cartResponse = new()
+                {
+                    Status = order.Status,
+                    IdClient = order.IdClient,
+                    TotalPrice = order.TotalPrice,
+                    ListTickets = tickets
+                };
+                return new GeneralResponse<CartResponse>
+                {
+                    Status = 200,
+                    Dataset = cartResponse
+                };
+            }
+            catch (Exception ex)
+            {
+                return new GeneralResponse<CartResponse>
+                {
+                    Message = "Error in Getting data!",
+                    Error = ex.Message,
+                    Status = 500
+                };
+            }
         }
+
+        // Do a Read All tickets! 
 
 
         //+ ReadClientByArgument(T id) -> Task<GeneralResponse<DomainModel>>
 
-        public async Task<GeneralResponse<String>> DeleteFromCartAsync(CartRequest request)
+        public async Task<GeneralResponse<String>> DeleteFromCartAsync(int IdTicket, int IdOrder)
         {
-            /*
-                DB -> {
-                Update Ticket (total_tickets =+ 1) Where id_ticket = @1
-                Update Order (sum all remnan Tickets) where idOrder = idCart
-                }
-            */
-            return null;
+
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                // Update Ticket (total_tickets =+ 1) Where id_ticket = @1
+                var ticketRemove = await _context.Tickets
+                    .Where(ot => ot.IDTicket == IdTicket)
+                    .Select(ot => ot.AvailableTotal)
+                    .FirstAsync();
+                await _context.Tickets.Where(tck => tck.IDTicket == IdTicket)
+                   .ExecuteUpdateAsync(set => set.SetProperty(up => up.AvailableTotal, (ticketRemove + 1)));
+                await _context.SaveChangesAsync();
+                //count all remnat tickets
+                var tickets = await _context.TicketOrder
+                    .Where(ot => ot.Order.Id == IdOrder && ot.Tickets.IDTicket != IdTicket)
+                    .Select(ot => new TicketDTO
+                    {
+                        Id = ot.Tickets.IDTicket,
+                        AvailableSeats = ot.Tickets.AvailableTotal,
+                        Discount = ot.Tickets.Discount,
+                        ZonePrice = ot.Tickets.ZonePrice.ZoneName,
+                        Price = ot.Tickets.ZonePrice.Price,
+                        Stadium = ot.Tickets.Game.Stadium.Name,
+                        LocalTeam = ot.Tickets.Game.LocalTeam,
+                        VisitorTeam = ot.Tickets.Game.VisitorTeam,
+                        Location = ot.Tickets.Game.Stadium.Location,
+                        SolePrice = ot.Tickets.SolePrice,
+                        TotalPrice = ot.Tickets.TotalPrice,
+                    })
+                    .ToListAsync();
+                //Update Order(sum all remnant Tickets) where idOrder = idCart
+                var totalForOrder = tickets.Sum(tickets => tickets.TotalPrice);
+                await _context.Orders.Where(ord => ord.Id == IdOrder)
+                    .ExecuteUpdateAsync(set => set.SetProperty(ord => ord.TotalPrice, totalForOrder));
+                await _context.SaveChangesAsync();
+                await transaction.CommitAsync();
+                return new GeneralResponse<String>
+                {
+                    Status = 200,
+                    Message = "Deleted From Cart!"
+
+                };
+            }
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                return new GeneralResponse<String>
+                {
+                    Message = "error at Delete Element from Cart",
+                    Error = ex.Message,
+                    Dataset = "",
+                    Status = 500
+                };
+            }
         }
 
-        public async Task<GeneralResponse<String>> DeleteAllCartAsync(int IdCart)
+        public async Task<GeneralResponse<String>> DeleteAllCartAsync(CartRequest request)
         {
             /*
                 DB -> {
@@ -129,10 +204,68 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 And id_ticket = @n ...
                 }
             */
-            return null;
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                foreach (var tickets in request.Tickets)
+                {
+                    await _context.Tickets.Where(tck => tck.IDTicket == tickets.Id)
+                    .ExecuteUpdateAsync(set => set.SetProperty(up => up.AvailableTotal, (tickets.AvailableSeats + 1)));
+                    await _context.SaveChangesAsync();
+                }
+                await _context.Orders.Where(ord => ord.Id == request.IdOrder)
+                   .ExecuteUpdateAsync(set => set
+                   .SetProperty(ord => ord.Status, false)
+                   .SetProperty(ord => ord.DateEnd, DateTime.Now)
+                   );
+                await _context.SaveChangesAsync();
+                await transaction.CommitAsync();
+                return new GeneralResponse<String>
+                {
+                    Status = 200,
+                    Message = "Deleted From Cart!"
+
+                };
+            }
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                return new GeneralResponse<String>
+                {
+                    Message = "error at Delete Element from Cart",
+                    Error = ex.Message,
+                    Dataset = "",
+                    Status = 500
+                };
+            }
         }
 
 
+        public async Task<GeneralResponse<String>> CheckOutCartAsync(CartRequest request)
+        {
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                await transaction.CommitAsync();
+                return new GeneralResponse<String>
+                {
+                    Status = 200,
+                    Message = "Successful Check Out!"
+
+                };
+            }
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                return new GeneralResponse<String>
+                {
+                    Message = "error at Check Out from Cart",
+                    Error = ex.Message,
+                    Dataset = "",
+                    Status = 500
+                };
+            }
+        }
 
     }
 }

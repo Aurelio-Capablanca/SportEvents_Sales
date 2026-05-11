@@ -74,6 +74,19 @@
         }
       }
     },
+    "/cart-api/get-cart": {
+      "get": {
+        "tags": [
+          "Cart"
+        ],
+        "operationId": "get-cart",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/client-api/save-client": {
       "post": {
         "tags": [
@@ -571,6 +584,7 @@
           "totalBuy": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
+              "null",
               "integer",
               "string"
             ],

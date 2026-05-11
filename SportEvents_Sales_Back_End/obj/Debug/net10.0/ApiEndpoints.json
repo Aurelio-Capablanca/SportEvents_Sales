@@ -106,6 +106,17 @@
   },
   {
     "ContainingType": "SportEvents_Sales_Back_End.Controllers.CartController",
+    "Method": "ReadCartAsync",
+    "RelativePath": "cart-api/get-cart",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "get-cart"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.CartController",
     "Method": "SaveCartAsync",
     "RelativePath": "cart-api/save-cart",
     "HttpMethod": "POST",

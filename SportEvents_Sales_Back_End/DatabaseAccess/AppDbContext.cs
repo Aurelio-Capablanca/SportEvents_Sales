@@ -47,9 +47,9 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.Property(o => o.Status).HasColumnName("status");//.ValueGeneratedOnAddOrUpdate();
                 entity.Property(o => o.DateStart).HasColumnName("datetime_start");
                 entity.Property(o => o.DateEnd).HasColumnName("datetime_close");
-                entity.Property(o => o.IdClient).HasColumnName("id_cliente");
-                entity.Property(o => o.SubTotal).HasColumnName("sub_total");
+                entity.Property(o => o.IdClient).HasColumnName("id_cliente");                
                 entity.Property(o => o.TotalPrice).HasColumnName("total_price");
+                entity.HasOne(o => o.Client).WithMany().HasForeignKey(o => o.IdClient);
             });
 
             modelBuilder.Entity<TicketOrderEntity>(entity =>
@@ -58,6 +58,8 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.HasKey(ot => new { ot.IdOrder, ot.IdTicket });
                 entity.Property(ot => ot.IdOrder).HasColumnName("id_order");
                 entity.Property(ot => ot.IdTicket).HasColumnName("id_ticket");
+                entity.HasOne(ot => ot.Tickets).WithMany().HasForeignKey(ot => ot.IdTicket);
+                entity.HasOne(ot => ot.Order).WithMany().HasForeignKey(ot => ot.IdOrder);
             });
 
             modelBuilder.Entity<TicketEntity>(entity =>
@@ -98,7 +100,7 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
 
             modelBuilder.Entity<GameEntity>(entity =>
             {
-                entity.ToTable("");
+                entity.ToTable("partidos");
                 entity.HasKey(g => g.IdGame);
                 entity.Property(g => g.IdGame).HasColumnName("id_partido");
                 entity.Property(g => g.LocalTeam).HasColumnName("equipo_local");

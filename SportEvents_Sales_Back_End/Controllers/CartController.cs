@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Azure.Core;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SportEvents_Sales_Back_End.Domain.Business;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Domain;
@@ -37,6 +38,20 @@ namespace SportEvents_Sales_Back_End.Controllers
         }
 
 
+        [Authorize]
+        [HttpGet("get-cart", Name = "get-cart")]
+        public async Task<ActionResult> ReadCartAsync() {
+            string email = _session.Email;
+            var process = await this._cartLogic.ReadCartAsync(email);
+            if (process.Status == 200)
+            {
+                return Ok(process);
+            }
+            else
+            {
+                return BadRequest(process);
+            }
+        }
 
     }
 }
