@@ -246,6 +246,14 @@ namespace SportEvents_Sales_Back_End.Domain.Business
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
+
+                await _context.Orders.Where(ord => ord.Id == request.IdOrder)
+                   .ExecuteUpdateAsync(set => set
+                   .SetProperty(ord => ord.Status, false)
+                   .SetProperty(ord => ord.DateEnd, DateTime.Now)
+                   );
+                await _context.SaveChangesAsync();
+
                 await transaction.CommitAsync();
                 return new GeneralResponse<String>
                 {

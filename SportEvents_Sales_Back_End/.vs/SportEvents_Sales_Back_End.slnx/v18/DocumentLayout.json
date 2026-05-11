@@ -100,8 +100,7 @@
               "ViewState": "AgIAACgAAAAAAAAAAAAcwDEAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-10T03:15:42.577Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -117,8 +116,7 @@
               "RelativeToolTip": "Controllers\\CartController.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAiwCoAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T04:39:19.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-10T04:39:19.307Z"
             },
             {
               "$type": "Document",
@@ -130,8 +128,7 @@
               "RelativeToolTip": "Model\\DTO\\TicketDTO.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwBYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T01:27:56.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-10T01:27:56.608Z"
             },
             {
               "$type": "Document",
@@ -162,8 +159,7 @@
               "RelativeToolTip": "Model\\Entities\\TicketOrderEntity.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAswBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T01:58:00.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-11T01:58:00.017Z"
             },
             {
               "$type": "Document",
@@ -175,8 +171,7 @@
               "RelativeToolTip": "Model\\Entities\\GameEntity.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAwBMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T23:29:29.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-10T23:29:29.706Z"
             },
             {
               "$type": "Document",
@@ -188,8 +183,7 @@
               "RelativeToolTip": "Model\\Entities\\StadiumEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T23:28:25.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-10T23:28:25.263Z"
             },
             {
               "$type": "Document",
@@ -262,8 +256,7 @@
               "RelativeToolTip": "Model\\ModelDomain\\Response\\CartResponse.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAowAcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T01:45:12.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-10T01:45:12.84Z"
             }
           ]
         },
@@ -279,7 +272,7 @@
               "RelativeDocumentMoniker": "Domain\\Business\\CartLogic.cs",
               "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\CartLogic.cs",
               "RelativeToolTip": "Domain\\Business\\CartLogic.cs",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAcwPEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAUwP8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-09T03:37:19.239Z",
               "EditorCaption": ""
