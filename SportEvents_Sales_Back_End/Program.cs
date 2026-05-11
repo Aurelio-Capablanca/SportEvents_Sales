@@ -8,35 +8,9 @@ using SportEvents_Sales_Back_End.Domain.Business;
 using SportEvents_Sales_Back_End.Domain.Rules;
 
 /* 
- Tasks list : 
-   - FrontEnd Basics (MVVC)
-        * public site
-        * private site
-   - Dual Login (Client and Admin) -> generate Roles over it (logically)
-   - CRUD's   (Ingestion -> Validation -> Persistence)
-       * Clientes  (Aurel)
-       * Tickets  + Orden (Aurel) 
-       * Partidos
-       * Precios 
-       * Sedes
-       * 
-   - Test Scrapping (Aurel)
-
 Working now! 
  -- Selling API 
-
-Implement :
-[HttpPost]
-public IActionResult CreateUser([FromBody] User user)
-{
-    if (user == null) return BadRequest();
-
-    _repository.Save(user);
-    
-    // Equivalent to ResponseEntity.created(uri).body(user)
-    return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
-}
-     
+ 
 */
 
 var builder = WebApplication.CreateBuilder(args);

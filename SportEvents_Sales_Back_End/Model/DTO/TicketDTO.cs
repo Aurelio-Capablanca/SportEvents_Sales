@@ -20,6 +20,6 @@
         /*End for game*/
         public decimal SolePrice { get; set; }
         public decimal TotalPrice { get; set; }
-        public int TotalBuy { get; set; }
+        public int? TotalBuy { get; set; } = 0;
     }
 }

@@ -10,6 +10,9 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
         public DbSet<OrderEntity> Orders => Set<OrderEntity>();
         public DbSet<TicketEntity> Tickets => Set<TicketEntity>();
         public DbSet<TicketOrderEntity> TicketOrder => Set<TicketOrderEntity>();
+        public DbSet<ZonePricesEntity> ZonePrices => Set<ZonePricesEntity>();
+        public DbSet<StadiumEntity> Stadiums => Set<StadiumEntity>();
+        public DbSet<GameEntity> Games => Set<GameEntity>();
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -57,7 +60,8 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.Property(ot => ot.IdTicket).HasColumnName("id_ticket");
             });
 
-            modelBuilder.Entity<TicketEntity>(entity => {
+            modelBuilder.Entity<TicketEntity>(entity =>
+            {
                 entity.ToTable("tickets");
                 entity.HasKey(t => t.IDTicket);
                 entity.Property(t => t.IDTicket).HasColumnName("id_ticket");//.ValueGeneratedOnAddOrUpdate();
@@ -69,6 +73,40 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.Property(t => t.AvailableTotal).HasColumnName("cupo_disponible");
                 entity.Property(t => t.SolePrice).HasColumnName("sole_price");
                 entity.Property(t => t.TotalPrice).HasColumnName("total_price");
+                entity.HasOne(t => t.ZonePrice).WithMany().HasForeignKey(t => t.IdZone);
+                entity.HasOne(t => t.Game).WithMany().HasForeignKey(t => t.IdGame);
+            });
+
+            modelBuilder.Entity<ZonePricesEntity>(entity =>
+            {
+                entity.ToTable("zonas_precios");
+                entity.HasKey(pz => pz.IdZone);
+                entity.Property(pz => pz.IdZone).HasColumnName("id_zona_precio");
+                entity.Property(pz => pz.ZoneName).HasColumnName("nombre_zona_precio");
+                entity.Property(pz => pz.Price).HasColumnName("precio_zona");
+            });
+
+            modelBuilder.Entity<StadiumEntity>(entity =>
+            {
+                entity.ToTable("estadio");
+                entity.HasKey(s => s.IdStadium);
+                entity.Property(s => s.IdStadium).HasColumnName("id_estadio");
+                entity.Property(s => s.Name).HasColumnName("nombre_estadio");
+                entity.Property(s => s.Location).HasColumnName("ubicacion_estadio");
+                entity.Property(s => s.Capacity).HasColumnName("capacidad_total");
+            });
+
+            modelBuilder.Entity<GameEntity>(entity =>
+            {
+                entity.ToTable("");
+                entity.HasKey(g => g.IdGame);
+                entity.Property(g => g.IdGame).HasColumnName("id_partido");
+                entity.Property(g => g.LocalTeam).HasColumnName("equipo_local");
+                entity.Property(g => g.VisitorTeam).HasColumnName("equipo_visitante");
+                entity.Property(g => g.TimeGame).HasColumnName("fecha_hora");
+                entity.Property(g => g.IdStadium).HasColumnName("id_estadio");
+                entity.Property(g => g.Status).HasColumnName("estado");
+                entity.HasOne(g => g.Stadium).WithMany().HasForeignKey(g => g.IdStadium);
             });
 
 

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SportEvents_Sales_Back_End.DatabaseAccess;
+using SportEvents_Sales_Back_End.Model.DTO;
 using SportEvents_Sales_Back_End.Model.Entities;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Domain;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Request;
@@ -48,7 +49,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 }
                 // INSERT TO Ticket_Orders (add always, since this concats with Order)
                 foreach (var ticket in request.Tickets)
-                {                    
+                {
                     var ticketOrder = new TicketOrderEntity()
                     {
                         IdOrder = order?.Id ?? request.IdOrder.Value,
@@ -60,10 +61,10 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 //UPDATE TICKET (total_tickets =-1)
                 foreach (var ticket in request.Tickets)
                 {
-                    await _context.Tickets.Where(ticket => ticket.IDTicket == ticket.IDTicket)
+                    await _context.Tickets.Where(tck => tck.IDTicket == ticket.Id)
                         .ExecuteUpdateAsync(set => set.SetProperty(up => up.AvailableTotal, (ticket.AvailableSeats - 1)));
                     await _context.SaveChangesAsync();
-                }                
+                }
                 await transaction.CommitAsync();
                 return new GeneralResponse<CartResponse>
                 {
@@ -71,7 +72,6 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                     Message = "Added To Cart!"
 
                 };
-                //return Ok(response);               
             }
             catch (Exception ex)
             {
@@ -82,15 +82,28 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                     Error = ex.Message,
                     Status = 500
                 };
-                //return BadRequest(err);
-
             }
-
-
         }
 
         public async Task<GeneralResponse<List<CartResponse>>> ReadCartAsync(String EmailClient)
         {
+            var tickets = await _context.Tickets
+            .Select(t => new TicketDTO
+            {
+                Id = t.IDTicket,
+                AvailableSeats = t.AvailableTotal,
+                Discount = t.Discount,
+                ZonePrice = t.ZonePrice.ZoneName,
+                Price = t.ZonePrice.Price,
+                Stadium = t.Game.Stadium.Name,
+                LocalTeam = t.Game.LocalTeam,
+                VisitorTeam = t.Game.VisitorTeam,
+                Location = t.Game.Stadium.Location,
+                SolePrice = t.SolePrice,
+                TotalPrice = t.TotalPrice,
+            })
+            .ToListAsync();
+
             return null;
         }
 
