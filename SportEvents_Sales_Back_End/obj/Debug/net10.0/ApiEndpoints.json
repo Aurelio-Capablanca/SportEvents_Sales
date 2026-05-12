@@ -106,6 +106,57 @@
   },
   {
     "ContainingType": "SportEvents_Sales_Back_End.Controllers.CartController",
+    "Method": "Checkout",
+    "RelativePath": "cart-api/checkout-cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.Request.CartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "checkout-cart"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.CartController",
+    "Method": "DeleteAllCartAsync",
+    "RelativePath": "cart-api/delete-all-cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.Request.CartRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "delete-all-cart"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.CartController",
+    "Method": "DeleteFromCartAsync",
+    "RelativePath": "cart-api/delete-one-cart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.Request.TicketDeletor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "delete-one-cart"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.CartController",
     "Method": "ReadCartAsync",
     "RelativePath": "cart-api/get-cart",
     "HttpMethod": "GET",

@@ -55,6 +55,8 @@ namespace SportEvents_Sales_Back_End.Controllers
             }
         }
 
+        [Authorize]
+        [HttpPost("delete-one-cart", Name = "delete-one-cart")]
         public async Task<ActionResult> DeleteFromCartAsync([FromBody] TicketDeletor request)
         {
             var process = await this._cartLogic.DeleteFromCartAsync(request);
@@ -69,6 +71,8 @@ namespace SportEvents_Sales_Back_End.Controllers
         }
 
 
+        [Authorize]
+        [HttpPost("delete-all-cart", Name = "delete-all-cart")]
         public async Task<ActionResult> DeleteAllCartAsync([FromBody] CartRequest request)
         {
             var process = await this._cartLogic.DeleteAllCartAsync(request);
@@ -82,6 +86,9 @@ namespace SportEvents_Sales_Back_End.Controllers
             }
         }
 
+
+        [Authorize]
+        [HttpPost("checkout-cart", Name = "checkout-cart")]
         public async Task<ActionResult> Checkout([FromBody] CartRequest request)
         {
             var process = await this._cartLogic.CheckOutCartAsync(request);
