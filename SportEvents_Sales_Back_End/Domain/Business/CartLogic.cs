@@ -138,9 +138,10 @@ namespace SportEvents_Sales_Back_End.Domain.Business
 
         //+ ReadClientByArgument(T id) -> Task<GeneralResponse<DomainModel>>
 
-        public async Task<GeneralResponse<String>> DeleteFromCartAsync(int IdTicket, int IdOrder)
+        public async Task<GeneralResponse<String>> DeleteFromCartAsync(TicketDeletor request)
         {
-
+            int IdTicket = request.IdTicket;
+            int IdOrder = request.IdOrder;
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {

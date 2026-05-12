@@ -25,13 +25,14 @@ namespace SportEvents_Sales_Back_End.Controllers
 
         [Authorize]
         [HttpPost("save-cart", Name = "save-cart")]
-        public async Task<ActionResult> SaveCartAsync([FromBody] CartRequest request) {
+        public async Task<ActionResult> SaveCartAsync([FromBody] CartRequest request)
+        {
             var process = await this._cartLogic.SaveCartAsync(request, _session);
             if (process.Status == 200)
             {
                 return Ok(process);
             }
-            else 
+            else
             {
                 return BadRequest(process);
             }
@@ -40,9 +41,50 @@ namespace SportEvents_Sales_Back_End.Controllers
 
         [Authorize]
         [HttpGet("get-cart", Name = "get-cart")]
-        public async Task<ActionResult> ReadCartAsync() {
+        public async Task<ActionResult> ReadCartAsync()
+        {
             string email = _session.Email;
             var process = await this._cartLogic.ReadCartAsync(email);
+            if (process.Status == 200)
+            {
+                return Ok(process);
+            }
+            else
+            {
+                return BadRequest(process);
+            }
+        }
+
+        public async Task<ActionResult> DeleteFromCartAsync([FromBody] TicketDeletor request)
+        {
+            var process = await this._cartLogic.DeleteFromCartAsync(request);
+            if (process.Status == 200)
+            {
+                return Ok(process);
+            }
+            else
+            {
+                return BadRequest(process);
+            }
+        }
+
+
+        public async Task<ActionResult> DeleteAllCartAsync([FromBody] CartRequest request)
+        {
+            var process = await this._cartLogic.DeleteAllCartAsync(request);
+            if (process.Status == 200)
+            {
+                return Ok(process);
+            }
+            else
+            {
+                return BadRequest(process);
+            }
+        }
+
+        public async Task<ActionResult> Checkout([FromBody] CartRequest request)
+        {
+            var process = await this._cartLogic.CheckOutCartAsync(request);
             if (process.Status == 200)
             {
                 return Ok(process);
