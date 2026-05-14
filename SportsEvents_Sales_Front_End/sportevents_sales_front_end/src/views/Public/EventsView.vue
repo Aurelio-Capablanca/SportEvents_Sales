@@ -63,7 +63,7 @@ const fetchEvents = async () => {
             <span class="fw-bold">
               ${{ event.solePrice }}
             </span>
-            <router-link :to="'/events/' + event.id" class="btn btn-primary">
+            <router-link :to="'/game/' + event.id" class="btn btn-primary">
               View
             </router-link>
           </div>
