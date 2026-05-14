@@ -13,6 +13,7 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
         public DbSet<ZonePricesEntity> ZonePrices => Set<ZonePricesEntity>();
         public DbSet<StadiumEntity> Stadiums => Set<StadiumEntity>();
         public DbSet<GameEntity> Games => Set<GameEntity>();
+        public DbSet<TicketPriceEntity> TicketPrice => Set<TicketPriceEntity>();
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -47,7 +48,7 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.Property(o => o.Status).HasColumnName("status");//.ValueGeneratedOnAddOrUpdate();
                 entity.Property(o => o.DateStart).HasColumnName("datetime_start");
                 entity.Property(o => o.DateEnd).HasColumnName("datetime_close");
-                entity.Property(o => o.IdClient).HasColumnName("id_cliente");                
+                entity.Property(o => o.IdClient).HasColumnName("id_cliente");
                 entity.Property(o => o.TotalPrice).HasColumnName("total_price");
                 entity.HasOne(o => o.Client).WithMany().HasForeignKey(o => o.IdClient);
             });
@@ -70,12 +71,9 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.Property(t => t.HasDiscount).HasColumnName("has_discount");
                 entity.Property(t => t.Discount).HasColumnName("percentage");
                 entity.Property(t => t.CodeTicket).HasColumnName("code_ticket");
-                entity.Property(t => t.IdZone).HasColumnName("id_zona");
                 entity.Property(t => t.IdGame).HasColumnName("id_partido");
                 entity.Property(t => t.AvailableTotal).HasColumnName("cupo_disponible");
-                entity.Property(t => t.SolePrice).HasColumnName("sole_price");
                 entity.Property(t => t.TotalPrice).HasColumnName("total_price");
-                entity.HasOne(t => t.ZonePrice).WithMany().HasForeignKey(t => t.IdZone);
                 entity.HasOne(t => t.Game).WithMany().HasForeignKey(t => t.IdGame);
             });
 
@@ -108,9 +106,20 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.Property(g => g.TimeGame).HasColumnName("fecha_hora");
                 entity.Property(g => g.IdStadium).HasColumnName("id_estadio");
                 entity.Property(g => g.Status).HasColumnName("estado");
+                entity.Property(g => g.Tournament).HasColumnName("torneo");
                 entity.HasOne(g => g.Stadium).WithMany().HasForeignKey(g => g.IdStadium);
             });
 
+            modelBuilder.Entity<TicketPriceEntity>(entity =>
+            {
+                entity.ToTable("ticket_price");
+                entity.HasKey(pt => new { pt.IdPriceZone, pt.IdTicket });
+                entity.Property(pt => pt.IdPriceZone).HasColumnName("id_price_zone");
+                entity.Property(pt => pt.IdTicket).HasColumnName("id_ticket");
+                entity.Property(pt => pt.Price).HasColumnName("price");
+                entity.HasOne(pt => pt.Tickets).WithMany().HasForeignKey(ot => ot.IdTicket);
+                entity.HasOne(pt => pt.ZonePrice).WithMany().HasForeignKey(ot => ot.IdPriceZone);
+            });
 
         }
 

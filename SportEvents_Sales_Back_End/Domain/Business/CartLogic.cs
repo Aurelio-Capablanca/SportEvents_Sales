@@ -9,6 +9,7 @@ using SportEvents_Sales_Back_End.Model.ModelDomain.Domain;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Request;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Response;
 using System.Diagnostics;
+using System.Net.Sockets;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace SportEvents_Sales_Back_End.Domain.Business
@@ -98,14 +99,13 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         Id = ot.Tickets.IDTicket,
                         AvailableSeats = ot.Tickets.AvailableTotal,
                         Discount = ot.Tickets.Discount,
-                        ZonePrice = ot.Tickets.ZonePrice.ZoneName,
-                        Price = ot.Tickets.ZonePrice.Price,
                         Stadium = ot.Tickets.Game.Stadium.Name,
                         LocalTeam = ot.Tickets.Game.LocalTeam,
                         VisitorTeam = ot.Tickets.Game.VisitorTeam,
-                        Location = ot.Tickets.Game.Stadium.Location,
-                        SolePrice = ot.Tickets.SolePrice,
+                        Location = ot.Tickets.Game.Stadium.Location,                        
                         TotalPrice = ot.Tickets.TotalPrice,
+                        Date = ot.Tickets.Game.TimeGame.ToString("dd/MM/yyyy"),
+                        Time = ot.Tickets.Game.TimeGame.ToString("h:mm tt")
                     })
                     .ToListAsync();
                 var order = await _context.Orders.Where(or => or.Client.Email == EmailClient && or.Status).FirstAsync();
@@ -153,6 +153,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 await _context.Tickets.Where(tck => tck.IDTicket == IdTicket)
                    .ExecuteUpdateAsync(set => set.SetProperty(up => up.AvailableTotal, (ticketRemove + 1)));
                 await _context.SaveChangesAsync();
+                
                 //count all remnat tickets
                 var tickets = await _context.TicketOrder
                     .Where(ot => ot.Order.Id == IdOrder && ot.Tickets.IDTicket != IdTicket)
@@ -161,14 +162,20 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         Id = ot.Tickets.IDTicket,
                         AvailableSeats = ot.Tickets.AvailableTotal,
                         Discount = ot.Tickets.Discount,
-                        ZonePrice = ot.Tickets.ZonePrice.ZoneName,
-                        Price = ot.Tickets.ZonePrice.Price,
+                        Prices = _context.TicketPrice
+                        .Where(tk => tk.Tickets.IDTicket == ot.Tickets.IDTicket)
+                        .Select(prices => new PricesDTO
+                        {
+                            ZonePrice = prices.ZonePrice.ZoneName,
+                            Price = prices.Price
+                        }).ToList(),
                         Stadium = ot.Tickets.Game.Stadium.Name,
                         LocalTeam = ot.Tickets.Game.LocalTeam,
                         VisitorTeam = ot.Tickets.Game.VisitorTeam,
-                        Location = ot.Tickets.Game.Stadium.Location,
-                        SolePrice = ot.Tickets.SolePrice,
+                        Location = ot.Tickets.Game.Stadium.Location,                       
                         TotalPrice = ot.Tickets.TotalPrice,
+                        Date = ot.Tickets.Game.TimeGame.ToString("dd/MM/yyyy"),
+                        Time = ot.Tickets.Game.TimeGame.ToString("h:mm tt")
                     })
                     .ToListAsync();
                 //Update Order(sum all remnant Tickets) where idOrder = idCart

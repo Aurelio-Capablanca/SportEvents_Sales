@@ -27,15 +27,14 @@ constraint FK_partido_ticket Foreign key (id_partido) references partidos(id_par
         public string? CodeTicket { get; set; } = string.Empty;
 
         // Navigation Properties
-        public virtual ZonePricesEntity ZonePrice { get; set; } 
+        //public virtual ZonePricesEntity ZonePrice { get; set; } 
         
-        public int IdZone { get; set; }
+        //public int IdZone { get; set; }
 
         public virtual GameEntity Game { get; set; }
 
         public int IdGame { get; set; }
-        public int AvailableTotal { get; set; }
-        public decimal SolePrice { get; set; }
+        public int AvailableTotal { get; set; }        
         public decimal TotalPrice { get; set; }
     }
 }

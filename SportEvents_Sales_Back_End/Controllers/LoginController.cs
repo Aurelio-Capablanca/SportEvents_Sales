@@ -23,12 +23,6 @@ namespace SportEvents_Sales_Back_End.Controllers
             _session = provider.GetSession();
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-
         [HttpGet("friendly-hello", Name = "friendly-hello")]
         public String Friendly()
         {

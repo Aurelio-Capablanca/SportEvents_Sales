@@ -425,6 +425,47 @@
         }
       }
     },
+    "/ticket-api/ticket-get-all": {
+      "get": {
+        "tags": [
+          "Ticket"
+        ],
+        "operationId": "ticket-get-all",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ticket-api/ticket-get-one/{IdTicket}": {
+      "get": {
+        "tags": [
+          "Ticket"
+        ],
+        "operationId": "ticket-get-one",
+        "parameters": [
+          {
+            "name": "IdTicket",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/summary-weather": {
       "get": {
         "tags": [
@@ -599,6 +640,25 @@
           }
         }
       },
+      "PricesDTO": {
+        "type": "object",
+        "properties": {
+          "zonePrice": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "price": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          }
+        }
+      },
       "TicketDeletor": {
         "type": "object",
         "properties": {
@@ -647,19 +707,11 @@
             ],
             "format": "double"
           },
-          "zonePrice": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "price": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
-            "format": "double"
+          "prices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PricesDTO"
+            }
           },
           "stadium": {
             "type": [
@@ -685,13 +737,23 @@
               "string"
             ]
           },
-          "solePrice": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+          "tournament": {
             "type": [
-              "number",
+              "null",
               "string"
-            ],
-            "format": "double"
+            ]
+          },
+          "date": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "time": {
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "totalPrice": {
             "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
@@ -757,6 +819,9 @@
     },
     {
       "name": "Login"
+    },
+    {
+      "name": "Ticket"
     },
     {
       "name": "WeatherForecast"

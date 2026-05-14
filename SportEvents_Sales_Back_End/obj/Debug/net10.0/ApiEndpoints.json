@@ -1,16 +1,6 @@
 [
   {
     "ContainingType": "SportEvents_Sales_Back_End.Controllers.LoginController",
-    "Method": "Index",
-    "RelativePath": "auth",
-    "HttpMethod": "",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "SportEvents_Sales_Back_End.Controllers.LoginController",
     "Method": "TestSecuring",
     "RelativePath": "auth/authorized-tester",
     "HttpMethod": "GET",
@@ -285,5 +275,33 @@
       }
     ],
     "EndpointName": "GetWeatherForecast"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.TicketController",
+    "Method": "ReadAllTickets",
+    "RelativePath": "ticket-api/ticket-get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "ticket-get-all"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.TicketController",
+    "Method": "ReadOneTickets",
+    "RelativePath": "ticket-api/ticket-get-one/{IdTicket}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdTicket",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "ticket-get-one"
   }
 ]

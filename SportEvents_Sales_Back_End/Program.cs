@@ -58,6 +58,8 @@ builder.Services.AddScoped<ClientLogic>();
 builder.Services.AddScoped<ClientRules>();
 //Cart 
 builder.Services.AddScoped<CartLogic>();
+//Tickets
+builder.Services.AddScoped<TicketLogic>();
 
 builder.Services.AddAuthorization();
 

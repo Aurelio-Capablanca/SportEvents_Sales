@@ -18,6 +18,7 @@
         public virtual StadiumEntity Stadium { get; set; }
         public int IdStadium { get; set; }
         public Boolean Status { get; set; }
+        public string? Tournament { get; set; } = string.Empty;
 
     }
 }
