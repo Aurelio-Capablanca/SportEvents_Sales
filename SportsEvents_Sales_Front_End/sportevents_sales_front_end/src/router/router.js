@@ -2,13 +2,16 @@ import { createRouter, createWebHistory } from "vue-router";
 import Login from '../components/Login.vue'
 import PublicDashboard from "@/views/Public/PublicDashboard.vue";
 import PrivateDashboard from "@/views/Private/PrivateDashboard.vue";
-
+import EventDetails from "@/views/Public/EventDetail.vue"
+import CartView from "@/views/Public/CartView.vue";
 
 const routes = [
     { path: '/', redirect: '/public-dashboard' }, // Redirect root to dashboard
-    { path: '/public-dashboard', component: PublicDashboard , meta: { requiresAuth: true } },
+    { path: '/public-dashboard', component: PublicDashboard, meta: { requiresAuth: true } },
     { path: '/login-client', component: Login },
-    { path: '/admin', component: PrivateDashboard, meta: { requiresAuth: true } }
+    { path: '/admin', component: PrivateDashboard, meta: { requiresAuth: true } },
+    { path: '/game/:id', component: EventDetails},
+    { path: '/cart/:id', component: CartView, meta: { requiresAuth: true } },
 ]
 
 
@@ -20,9 +23,9 @@ const router = createRouter({
 
 router.beforeEach((to) => {
     const isAuthenticated = !!localStorage.getItem('token')
-    console.log("is authenticated ? ",isAuthenticated);
-    console.log("meta ? ",to.meta);
-    if (to.meta.requiresAuth &&  !isAuthenticated) {        
+    console.log("is authenticated ? ", isAuthenticated);
+    console.log("meta ? ", to.meta);
+    if (to.meta.requiresAuth && !isAuthenticated) {
         return '/login-client'
     }
     return true
