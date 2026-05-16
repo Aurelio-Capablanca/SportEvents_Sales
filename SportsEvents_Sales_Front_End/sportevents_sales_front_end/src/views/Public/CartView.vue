@@ -1,32 +1,47 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import axios from 'axios'
 
-const cart = ref([
-    {
-        id: 1,
-        title: 'Rock Festival',
-        quantity: 2,
-        price: 50
-    },
-    {
-        id: 2,
-        title: 'Jazz Night',
-        quantity: 1,
-        price: 35
-    }
-])
+const token = localStorage.getItem('token');
+const cart = ref([])
 
-const total = computed(() => {
-    return cart.value.reduce((sum, item) => {
-        return sum + (item.price * item.quantity)
-    }, 0)
+
+onMounted(() => {
+    loadCart()
 })
 
-const removeItem = (id) => {
-    cart.value = cart.value.filter(
-        item => item.id !== id
-    )
+
+const loadCart = async () => {
+    console.log('Loading events...')
+    try {
+        const response = await axios.get(
+            'http://192.168.122.44:5105/cart-api/get-cart',
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }
+        )
+        console.log(response.data);
+        if (response.data.status == 200) {
+            cart.value = response.data.dataset
+        }
+    } catch (error) {
+        console.error('View error:', error)
+    }
 }
+
+// const total = computed(() => {
+//     return cart.value.reduce((sum, item) => {
+//         return sum + (item.price * item.quantity)
+//     }, 0)
+// })
+
+// const removeItem = (id) => {
+//     cart.value = cart.value.filter(
+//         item => item.id !== id
+//     )
+// }
 </script>
 
 <template>
@@ -43,32 +58,34 @@ const removeItem = (id) => {
             <div class="col-lg-8">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <div v-for="item in cart" :key="item.id" class="border-bottom py-3">
+                        <div v-for="event in cart.listTickets" :key="event.id" class="border-bottom py-3">
                             <div class="row align-items-center">
                                 <div class="col-md-6">
                                     <h5 class="mb-1">
-                                        {{ item.title }}
+                                        {{ event.localTeam }}
+                                        vs
+                                        {{ event.visitorTeam }}
                                     </h5>
                                     <small class="text-muted">
-                                        Ticket ID: {{ item.id }}
+                                        Ticket ID: {{ event.id }}
                                     </small>
                                 </div>
                                 <div class="col-md-2 text-center">
 
                                     <span class="badge bg-secondary">
-                                        x{{ item.quantity }}
+                                        x{{ event.quantity }}
                                     </span>
 
                                 </div>
                                 <div class="col-md-2 text-center">
 
                                     <span class="fw-bold">
-                                        ${{ item.price }}
+                                        ${{ event.totalPrice }}
                                     </span>
 
                                 </div>
                                 <div class="col-md-2 text-end">
-                                    <button class="btn btn-outline-danger btn-sm" @click="removeItem(item.id)">
+                                    <button class="btn btn-outline-danger btn-sm" @click="removeItem(event.id)">
                                         Remove
                                     </button>
                                 </div>
@@ -86,7 +103,7 @@ const removeItem = (id) => {
                         <div class="d-flex justify-content-between mb-3">
                             <span>Total</span>
                             <span class="fw-bold">
-                                ${{ total }}
+                                ${{ cart.totalPrice }}
                             </span>
                         </div>
                         <button class="btn btn-success w-100">
