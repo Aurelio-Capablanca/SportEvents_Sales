@@ -2,8 +2,11 @@
 {
     public class PricesDTO
     {
+
+        public int Id { get; set; }
         public string? ZonePrice { get; set; } = "";
         public decimal Price { get; set; }       
+        public int AvailableSeats { get; set; }
 
     }
 }

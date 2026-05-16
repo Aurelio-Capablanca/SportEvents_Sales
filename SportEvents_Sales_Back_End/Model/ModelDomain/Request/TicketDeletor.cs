@@ -2,7 +2,7 @@
 {
     public class TicketDeletor
     {
-
+        public int IdPriceTicket { get; set; }
         public int IdTicket { get; set; }
         public int IdOrder { get; set; }
 

@@ -56,11 +56,14 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
             modelBuilder.Entity<TicketOrderEntity>(entity =>
             {
                 entity.ToTable("orden_ticket");
-                entity.HasKey(ot => new { ot.IdOrder, ot.IdTicket });
+                entity.HasKey(ot => new { ot.IdOrder, ot.IdTicket, ot.IdPriceTicket });
                 entity.Property(ot => ot.IdOrder).HasColumnName("id_order");
                 entity.Property(ot => ot.IdTicket).HasColumnName("id_ticket");
+                entity.Property(ot => ot.IdPriceTicket).HasColumnName("id_ticket_price");
+                entity.Property(ot => ot.BoughtSeats).HasColumnName("bought_seats");
                 entity.HasOne(ot => ot.Tickets).WithMany().HasForeignKey(ot => ot.IdTicket);
                 entity.HasOne(ot => ot.Order).WithMany().HasForeignKey(ot => ot.IdOrder);
+                entity.HasOne(ot => ot.TicketPrice).WithMany().HasForeignKey(ot => ot.IdPriceTicket);
             });
 
             modelBuilder.Entity<TicketEntity>(entity =>
@@ -113,10 +116,12 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
             modelBuilder.Entity<TicketPriceEntity>(entity =>
             {
                 entity.ToTable("ticket_price");
-                entity.HasKey(pt => new { pt.IdPriceZone, pt.IdTicket });
+                entity.HasKey(pt =>  pt.IdTicketPrice);
+                entity.Property(pt => pt.IdTicketPrice).HasColumnName("id_ticket_price");
                 entity.Property(pt => pt.IdPriceZone).HasColumnName("id_price_zone");
                 entity.Property(pt => pt.IdTicket).HasColumnName("id_ticket");
                 entity.Property(pt => pt.Price).HasColumnName("price");
+                entity.Property(pt => pt.AvailableSeats).HasColumnName("available_seats");
                 entity.HasOne(pt => pt.Tickets).WithMany().HasForeignKey(ot => ot.IdTicket);
                 entity.HasOne(pt => pt.ZonePrice).WithMany().HasForeignKey(ot => ot.IdPriceZone);
             });

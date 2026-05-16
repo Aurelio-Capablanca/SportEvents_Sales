@@ -5,9 +5,9 @@
 
         public int Id { get; set; }
         public int AvailableSeats { get; set; }
-        public decimal Discount { get; set; }        
+        public decimal Discount { get; set; }
         /*Get more from Zone*/
-        public List<PricesDTO> Prices { get; set; }                
+        public List<PricesDTO>? Prices { get; set; }
         /*Get more from Game*/
         public string? Stadium { get; set; } = "";
         public string? LocalTeam { get; set; } = "";

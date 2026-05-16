@@ -98,16 +98,10 @@
     "ContainingType": "SportEvents_Sales_Back_End.Controllers.CartController",
     "Method": "Checkout",
     "RelativePath": "cart-api/checkout-cart",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.Request.CartRequest",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [],
     "EndpointName": "checkout-cart"
   },

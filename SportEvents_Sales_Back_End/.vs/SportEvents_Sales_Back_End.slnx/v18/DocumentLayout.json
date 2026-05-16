@@ -3,52 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\domain\\business\\ticketlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:domain\\business\\ticketlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\domain\\business\\cartlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:domain\\business\\cartlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\gameentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\entities\\gameentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\dto\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\dto\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\modeldomain\\request\\cartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\modeldomain\\request\\cartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\ticketpriceentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\entities\\ticketpriceentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\databaseaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:databaseaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\ticketentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\entities\\ticketentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\ticketorderentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\entities\\ticketorderentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\domain\\business\\ticketlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:domain\\business\\ticketlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\modeldomain\\request\\cartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\modeldomain\\request\\cartrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\orderentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\entities\\orderentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\modeldomain\\request\\ticketdeletor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\modeldomain\\request\\ticketdeletor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\modeldomain\\response\\cartresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\modeldomain\\response\\cartresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\dto\\pricesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\dto\\pricesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\dto\\checkoutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\dto\\checkoutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\ticketpriceentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\entities\\ticketpriceentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\dto\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\dto\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\orderentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\entities\\orderentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\gameentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\entities\\gameentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\model\\entities\\ticketentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:model\\entities\\ticketentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,10 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\domain\\business\\clientlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:domain\\business\\clientlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|c:\\users\\aurel\\desktop\\projects\\sportevents_sales\\sportevents_sales_back_end\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00187B22-7C8A-A318-FB9B-0237C667AFAC}|SportEvents_Sales_Back_End.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -73,18 +89,18 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 250,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 225,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAIwD0AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwD0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T03:29:51.477Z",
               "IsPinned": true,
@@ -92,13 +108,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\DatabaseAccess\\AppDbContext.cs",
               "RelativeDocumentMoniker": "DatabaseAccess\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\DatabaseAccess\\AppDbContext.cs",
               "RelativeToolTip": "DatabaseAccess\\AppDbContext.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAwwG8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAADwvzEAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-10T03:15:42.577Z",
               "IsPinned": true,
@@ -110,26 +126,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TicketController.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\TicketController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TicketController.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\TicketController.cs",
-              "RelativeToolTip": "Controllers\\TicketController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAgwCoAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T03:48:56.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "TicketDTO.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\DTO\\TicketDTO.cs",
               "RelativeDocumentMoniker": "Model\\DTO\\TicketDTO.cs",
               "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\DTO\\TicketDTO.cs",
               "RelativeToolTip": "Model\\DTO\\TicketDTO.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAqwBEAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-10T01:27:56.608Z",
               "EditorCaption": ""
@@ -137,6 +140,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 14,
+              "Title": "TicketController.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\TicketController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TicketController.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\TicketController.cs",
+              "RelativeToolTip": "Controllers\\TicketController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAowB0AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T03:48:56.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "ClientLogic.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\ClientLogic.cs",
               "RelativeDocumentMoniker": "Domain\\Business\\ClientLogic.cs",
@@ -144,24 +160,23 @@
               "RelativeToolTip": "Domain\\Business\\ClientLogic.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T03:40:42.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-06T03:40:42.037Z"
             }
           ]
         },
         {
-          "DockedWidth": 17,
+          "DockedWidth": 37,
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CartRequest.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\Request\\CartRequest.cs",
               "RelativeDocumentMoniker": "Model\\ModelDomain\\Request\\CartRequest.cs",
               "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\Request\\CartRequest.cs",
               "RelativeToolTip": "Model\\ModelDomain\\Request\\CartRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-09T03:52:42.388Z",
               "IsPinned": true,
@@ -169,59 +184,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameEntity.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\GameEntity.cs",
-              "RelativeDocumentMoniker": "Model\\Entities\\GameEntity.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\GameEntity.cs",
-              "RelativeToolTip": "Model\\Entities\\GameEntity.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "TicketOrderEntity.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\TicketOrderEntity.cs",
+              "RelativeDocumentMoniker": "Model\\Entities\\TicketOrderEntity.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\TicketOrderEntity.cs",
+              "RelativeToolTip": "Model\\Entities\\TicketOrderEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAACB7wBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T04:17:27.036Z",
+              "WhenOpened": "2026-05-16T04:08:54.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TicketPriceEntity.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\TicketPriceEntity.cs",
-              "RelativeDocumentMoniker": "Model\\Entities\\TicketPriceEntity.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\TicketPriceEntity.cs",
-              "RelativeToolTip": "Model\\Entities\\TicketPriceEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T03:42:47.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PricesDTO.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\DTO\\PricesDTO.cs",
-              "RelativeDocumentMoniker": "Model\\DTO\\PricesDTO.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\DTO\\PricesDTO.cs",
-              "RelativeToolTip": "Model\\DTO\\PricesDTO.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAQwAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T03:33:30.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "OrderEntity.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\OrderEntity.cs",
               "RelativeDocumentMoniker": "Model\\Entities\\OrderEntity.cs",
               "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\OrderEntity.cs",
               "RelativeToolTip": "Model\\Entities\\OrderEntity.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA+wA8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-10T06:08:01.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
+              "Title": "CartResponse.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\Response\\CartResponse.cs",
+              "RelativeDocumentMoniker": "Model\\ModelDomain\\Response\\CartResponse.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\Response\\CartResponse.cs",
+              "RelativeToolTip": "Model\\ModelDomain\\Response\\CartResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T03:46:46.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PricesDTO.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\DTO\\PricesDTO.cs",
+              "RelativeDocumentMoniker": "Model\\DTO\\PricesDTO.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\DTO\\PricesDTO.cs",
+              "RelativeToolTip": "Model\\DTO\\PricesDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAABBwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T03:33:30.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CheckoutDTO.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\DTO\\CheckoutDTO.cs",
+              "RelativeDocumentMoniker": "Model\\DTO\\CheckoutDTO.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\DTO\\CheckoutDTO.cs",
+              "RelativeToolTip": "Model\\DTO\\CheckoutDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T00:31:41.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TicketPriceEntity.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\TicketPriceEntity.cs",
+              "RelativeDocumentMoniker": "Model\\Entities\\TicketPriceEntity.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\TicketPriceEntity.cs",
+              "RelativeToolTip": "Model\\Entities\\TicketPriceEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T03:42:47.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GameEntity.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\GameEntity.cs",
+              "RelativeDocumentMoniker": "Model\\Entities\\GameEntity.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\GameEntity.cs",
+              "RelativeToolTip": "Model\\Entities\\GameEntity.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T04:17:27.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "TicketEntity.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\Entities\\TicketEntity.cs",
               "RelativeDocumentMoniker": "Model\\Entities\\TicketEntity.cs",
@@ -229,18 +283,69 @@
               "RelativeToolTip": "Model\\Entities\\TicketEntity.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAxwBoAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T03:21:45.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-10T03:21:45.776Z"
             }
           ]
         },
         {
-          "DockedWidth": 352,
-          "SelectedChildIndex": 3,
+          "DockedWidth": 357,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 7,
+              "Title": "TicketDeletor.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\Request\\TicketDeletor.cs",
+              "RelativeDocumentMoniker": "Model\\ModelDomain\\Request\\TicketDeletor.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Model\\ModelDomain\\Request\\TicketDeletor.cs",
+              "RelativeToolTip": "Model\\ModelDomain\\Request\\TicketDeletor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T04:02:46.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CartLogic.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\CartLogic.cs",
+              "RelativeDocumentMoniker": "Domain\\Business\\CartLogic.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\CartLogic.cs",
+              "RelativeToolTip": "Domain\\Business\\CartLogic.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAcwHsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T03:37:19.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TicketLogic.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\TicketLogic.cs",
+              "RelativeDocumentMoniker": "Domain\\Business\\TicketLogic.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\TicketLogic.cs",
+              "RelativeToolTip": "Domain\\Business\\TicketLogic.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAkwFIAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T03:36:41.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAcwC4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T04:39:19.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
@@ -248,50 +353,11 @@
               "RelativeToolTip": "Controllers\\LoginController.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAzwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T02:53:58.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-14T02:53:58.138Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\CartController.cs",
-              "RelativeToolTip": "Controllers\\CartController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAzwBkAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T04:39:19.307Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CartLogic.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\CartLogic.cs",
-              "RelativeDocumentMoniker": "Domain\\Business\\CartLogic.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\CartLogic.cs",
-              "RelativeToolTip": "Domain\\Business\\CartLogic.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAgwEwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T03:37:19.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TicketLogic.cs",
-              "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\TicketLogic.cs",
-              "RelativeDocumentMoniker": "Domain\\Business\\TicketLogic.cs",
-              "ToolTip": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Domain\\Business\\TicketLogic.cs",
-              "RelativeToolTip": "Domain\\Business\\TicketLogic.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAUwFgAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T03:36:41.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "ClientController.cs",
               "DocumentMoniker": "C:\\Users\\aurel\\Desktop\\Projects\\SportEvents_Sales\\SportEvents_Sales_Back_End\\Controllers\\ClientController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClientController.cs",
@@ -299,8 +365,7 @@
               "RelativeToolTip": "Controllers\\ClientController.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAwCQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T05:53:27.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-09T05:53:27.323Z"
             }
           ]
         }

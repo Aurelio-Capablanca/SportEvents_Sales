@@ -27,9 +27,12 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         AvailableSeats = ticket.AvailableTotal,
                         Prices = _context.TicketPrice
                         .Where(tk => tk.Tickets.IDTicket == ticket.IDTicket)
-                        .Select(prices => new PricesDTO {
+                        .Select(prices => new PricesDTO
+                        {
                             ZonePrice = prices.ZonePrice.ZoneName,
-                            Price = prices.Price
+                            Price = prices.Price,
+                            AvailableSeats = prices.AvailableSeats,
+                            Id = prices.IdPriceZone
                         }).ToList(),
                         Discount = ticket.Discount,
                         Stadium = ticket.Game.Stadium.Name,
@@ -76,7 +79,9 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         .Select(prices => new PricesDTO
                         {
                             ZonePrice = prices.ZonePrice.ZoneName,
-                            Price = prices.Price
+                            Price = prices.Price,
+                            AvailableSeats = prices.AvailableSeats,
+                            Id = prices.IdTicketPrice
                         }).ToList(),
                         Discount = ticket.Discount,
                         Stadium = ticket.Game.Stadium.Name,

@@ -8,8 +8,7 @@
         public DateTime DateStart { get; set; }
         public DateTime? DateEnd { get; set; }
         public virtual ClientEntity Client { get; set; }
-        public int IdClient { get; set; }   
-        //public decimal SubTotal { get; set; }
+        public int IdClient { get; set; }           
         public decimal TotalPrice { get; set; }
 
     }

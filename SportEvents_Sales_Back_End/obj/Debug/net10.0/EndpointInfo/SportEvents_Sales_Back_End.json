@@ -154,31 +154,11 @@
       }
     },
     "/cart-api/checkout-cart": {
-      "post": {
+      "get": {
         "tags": [
           "Cart"
         ],
         "operationId": "checkout-cart",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CartRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CartRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CartRequest"
-              }
-            }
-          },
-          "required": true
-        },
         "responses": {
           "200": {
             "description": "OK"
@@ -514,13 +494,41 @@
           "tickets": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/TicketDTO"
+              "$ref": "#/components/schemas/CheckoutDTO"
             }
-          },
-          "idOrder": {
+          }
+        }
+      },
+      "CheckoutDTO": {
+        "type": "object",
+        "properties": {
+          "idTicket": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
-              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "idPriceTicket": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "availableSeats": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "inCartTickets": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
               "integer",
               "string"
             ],
@@ -640,28 +648,17 @@
           }
         }
       },
-      "PricesDTO": {
-        "type": "object",
-        "properties": {
-          "zonePrice": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "price": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
-            "format": "double"
-          }
-        }
-      },
       "TicketDeletor": {
         "type": "object",
         "properties": {
+          "idPriceTicket": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
           "idTicket": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
@@ -673,100 +670,6 @@
           "idOrder": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          }
-        }
-      },
-      "TicketDTO": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
-          "availableSeats": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
-          "discount": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
-            "format": "double"
-          },
-          "prices": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PricesDTO"
-            }
-          },
-          "stadium": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "localTeam": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "visitorTeam": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "location": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "tournament": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "date": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "time": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "totalPrice": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
-            "type": [
-              "number",
-              "string"
-            ],
-            "format": "double"
-          },
-          "totalBuy": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "null",
               "integer",
               "string"
             ],

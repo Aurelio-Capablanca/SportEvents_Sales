@@ -75,7 +75,7 @@ namespace SportEvents_Sales_Back_End.Controllers
         [HttpPost("delete-all-cart", Name = "delete-all-cart")]
         public async Task<ActionResult> DeleteAllCartAsync([FromBody] CartRequest request)
         {
-            var process = await this._cartLogic.DeleteAllCartAsync(request);
+            var process = await this._cartLogic.DeleteAllCartAsync(request, _session);
             if (process.Status == 200)
             {
                 return Ok(process);
@@ -88,10 +88,10 @@ namespace SportEvents_Sales_Back_End.Controllers
 
 
         [Authorize]
-        [HttpPost("checkout-cart", Name = "checkout-cart")]
-        public async Task<ActionResult> Checkout([FromBody] CartRequest request)
+        [HttpGet("checkout-cart", Name = "checkout-cart")]
+        public async Task<ActionResult> Checkout()
         {
-            var process = await this._cartLogic.CheckOutCartAsync(request);
+            var process = await this._cartLogic.CheckOutCartAsync(_session);
             if (process.Status == 200)
             {
                 return Ok(process);
