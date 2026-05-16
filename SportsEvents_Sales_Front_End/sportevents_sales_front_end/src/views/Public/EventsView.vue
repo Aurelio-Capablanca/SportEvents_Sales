@@ -14,7 +14,7 @@ onMounted(() => {
 
 const fetchEvents = async () => {
   console.log('Loading events...')
-  try {    
+  try {
     const response = await axios.get(
       'http://192.168.122.44:5105/ticket-api/ticket-get-all',
       {
@@ -30,7 +30,7 @@ const fetchEvents = async () => {
   } catch (error) {
     console.error('View error:', error)
   }
-  console.log('events : ',events.value)
+  console.log('events : ', events.value)
 }
 </script>
 
@@ -40,16 +40,16 @@ const fetchEvents = async () => {
     <h1 class="fw-bold">
       Upcoming Games
     </h1>
-    <p class="text-muted">
+    <p class="text-muted"> 
       Browse available Soccer Games
     </p>
   </div>
   <div class="row g-4">
     <div class="col-md-6 col-lg-4" v-for="event in events" :key="event.id">
-      <div class="card h-100 shadow-sm">        
+      <div class="card h-100 shadow-sm">
         <div class="card-body">
           <h5 class="card-title">
-            {{ event.localTeam }} vs {{ event.visitorTeam}}
+            {{ event.localTeam }} vs {{ event.visitorTeam }}
           </h5>
           <p class="text-muted">
             {{ event.location }}
@@ -60,9 +60,14 @@ const fetchEvents = async () => {
         </div>
         <div class="card-footer bg-white border-0">
           <div class="d-flex justify-content-between align-items-center">
-            <span class="fw-bold">
-              ${{ event.solePrice }}
-            </span>
+            <div v-for="price in event.prices">
+              <span class="fw-bold">
+                {{price.zonePrice}} | ${{ price.price }}
+              </span>
+            </div>
+            <div>
+              
+            </div>
             <router-link :to="'/game/' + event.id" class="btn btn-primary">
               View
             </router-link>
