@@ -4,7 +4,6 @@
     {
 
         public int IdTicketPrice { get; set; }
-
         public virtual TicketEntity Tickets { get; set; }
         public int IdTicket { get; set; }
         public virtual ZonePricesEntity ZonePrice { get; set; }

@@ -1,18 +1,97 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SportEvents_Sales_Back_End.DatabaseAccess;
 using SportEvents_Sales_Back_End.Model.DTO;
+using SportEvents_Sales_Back_End.Model.Entities;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Request;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Response;
 
 namespace SportEvents_Sales_Back_End.Domain.Business
 {
-    public class TicketLogic
+    public class TicketLogic(AppDbContext dbContext)
     {
 
-        private readonly AppDbContext _context;
+        private readonly AppDbContext _context = dbContext;
 
-        public TicketLogic(AppDbContext dbContext)
+        public async Task<GeneralResponse<String>> SaveTicketsAsync(TicketWrapperRequest request)
         {
-            this._context = dbContext;
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
+            {
+                if (request.IdTicket == 0)
+                {
+                    //INSERT
+                    var ticket = new TicketEntity
+                    {
+                        HasDiscount = false,
+                        Discount = 0,
+                        IdGame = request.IdGame,
+                        AvailableTotal = 0,
+                    };
+                    await _context.AddAsync(ticket);
+                    await _context.SaveChangesAsync();
+                    foreach (TicketPriceRequest price in request.TicketPrices)
+                    {
+                        var prices = new TicketPriceEntity
+                        {
+                            IdTicket = ticket.IDTicket,
+                            AvailableSeats = price.AvailableSeats,
+                            IdPriceZone = price.IdPriceZone,
+                            Price = price.Price,
+                        };
+                        await _context.AddAsync(prices);
+                        await _context.SaveChangesAsync();
+                    }
+                    return new GeneralResponse<string>
+                    {
+                        Status = 200,
+                        Message = "Ticket Saved",
+                        Dataset = ""
+                    };
+                }
+                else
+                {
+                    //UPDATE
+                    var ticket = new TicketEntity
+                    {
+                        IDTicket = request.IdTicket,
+                        HasDiscount = false,
+                        Discount = 0,
+                        IdGame = request.IdGame,
+                        AvailableTotal = 0,
+                    };
+                    _context.Update(ticket);
+                    await _context.SaveChangesAsync();
+                    foreach (TicketPriceRequest price in request.TicketPrices)
+                    {
+                        var prices = new TicketPriceEntity
+                        {
+                            IdTicket = ticket.IDTicket,
+                            IdTicketPrice = price.IdTicketPrice,
+                            AvailableSeats = price.AvailableSeats,
+                            IdPriceZone = price.IdPriceZone,
+                            Price = price.Price,
+                        };
+                        _context.Update(prices);
+                        await _context.SaveChangesAsync();
+                    }
+                    return new GeneralResponse<string>
+                    {
+                        Status = 200,
+                        Message = "Ticket Updated",
+                        Dataset = ""
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                return new GeneralResponse<String>
+                {
+                    Message = "error at Saving to Ticket",
+                    Error = ex.Message,
+                    Status = 500
+                };
+            }            
         }
 
         public async Task<GeneralResponse<List<TicketDTO>>> ReadAllTickets()
