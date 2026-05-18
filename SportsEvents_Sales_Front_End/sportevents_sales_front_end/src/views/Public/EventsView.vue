@@ -68,7 +68,7 @@ const fetchEvents = async () => {
             <div>
               
             </div>
-            <router-link :to="'/game/' + event.id" class="btn btn-primary">
+            <router-link :to="'/game/' + event.idTicket" class="btn btn-primary">
               View
             </router-link>
           </div>

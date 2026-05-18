@@ -124,7 +124,7 @@ const addToCart = async (ticket, price, availableSeats) => {
                         </div>
                         <input type="number" min="1" class="form-control" style="width: 100px"
                             v-model.number="seatAdd[ticket.id]">
-                        <button class="btn btn-success" @click="addToCart(event.id, ticket.id, ticket.availableSeats)">
+                        <button class="btn btn-success" @click="addToCart(event.idTicket, ticket.id, ticket.availableSeats)">
                             Add to Cart
                         </button>
                     </div>

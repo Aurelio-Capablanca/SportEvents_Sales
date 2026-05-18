@@ -31,6 +31,12 @@ const loadCart = async () => {
     }
 }
 
+
+const removeItem = async (id) => {
+    console.log("Removing ", id)
+
+}
+
 // const total = computed(() => {
 //     return cart.value.reduce((sum, item) => {
 //         return sum + (item.price * item.quantity)
@@ -67,13 +73,15 @@ const loadCart = async () => {
                                         {{ event.visitorTeam }}
                                     </h5>
                                     <small class="text-muted">
-                                        Ticket ID: {{ event.id }}
+                                        Ticket ID: {{ event.idTicket }}
+                                        Price ID: {{ event.idTicketPrice }}
+                                        Order ID: {{ event.idOrder }}
                                     </small>
                                 </div>
                                 <div class="col-md-2 text-center">
 
                                     <span class="badge bg-secondary">
-                                        x{{ event.quantity }}
+                                        x{{ event.totalBuy }}
                                     </span>
 
                                 </div>
