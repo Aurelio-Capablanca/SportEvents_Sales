@@ -59,7 +59,7 @@ namespace SportEvents_Sales_Back_End.Controllers
         [HttpPost("delete-one-cart", Name = "delete-one-cart")]
         public async Task<ActionResult> DeleteFromCartAsync([FromBody] TicketDeletor request)
         {
-            var process = await this._cartLogic.DeleteFromCartAsync(request);
+            var process = await this._cartLogic.DeleteOneFromCartAsync(request);
             if (process.Status == 200)
             {
                 return Ok(process);

@@ -61,6 +61,7 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.Property(ot => ot.IdTicket).HasColumnName("id_ticket");
                 entity.Property(ot => ot.IdPriceTicket).HasColumnName("id_ticket_price");
                 entity.Property(ot => ot.BoughtSeats).HasColumnName("bought_seats");
+                entity.Property(ot => ot.IsBillable).HasColumnName("is_billable");                
                 entity.HasOne(ot => ot.Tickets).WithMany().HasForeignKey(ot => ot.IdTicket);
                 entity.HasOne(ot => ot.Order).WithMany().HasForeignKey(ot => ot.IdOrder);
                 entity.HasOne(ot => ot.TicketPrice).WithMany().HasForeignKey(ot => ot.IdPriceTicket);

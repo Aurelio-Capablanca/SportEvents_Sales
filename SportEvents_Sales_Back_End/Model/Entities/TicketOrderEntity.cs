@@ -16,7 +16,6 @@ constraint FK_order_tickets foreign key (id_order) references ordenes(id_orden)
 
     public class TicketOrderEntity
     {
-
         public virtual TicketEntity Tickets { get; set; }
         public int IdTicket { get; set; }
         public virtual OrderEntity Order { get; set; }
@@ -24,7 +23,6 @@ constraint FK_order_tickets foreign key (id_order) references ordenes(id_orden)
         public int BoughtSeats { get; set; }
         public virtual TicketPriceEntity TicketPrice { get; set; }
         public int IdPriceTicket { get; set; }
-
-
+        public bool IsBillable { get; set; }
     }
 }

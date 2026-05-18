@@ -102,7 +102,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 var tickets = await _context.Tickets
                     .Select(ticket => new TicketDTO
                     {
-                        Id = ticket.IDTicket,
+                        IdTicket = ticket.IDTicket,
                         AvailableSeats = ticket.AvailableTotal,
                         Prices = _context.TicketPrice
                         .Where(tk => tk.Tickets.IDTicket == ticket.IDTicket)
@@ -151,7 +151,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                     .Where(ticket => ticket.IDTicket == IdTicket)
                     .Select(ticket => new TicketDTO
                     {
-                        Id = ticket.IDTicket,
+                        IdTicket = ticket.IDTicket,
                         AvailableSeats = ticket.AvailableTotal,
                         Prices = _context.TicketPrice
                         .Where(tk => tk.Tickets.IDTicket == ticket.IDTicket)
