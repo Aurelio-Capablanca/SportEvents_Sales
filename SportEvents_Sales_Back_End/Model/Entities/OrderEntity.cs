@@ -10,6 +10,6 @@
         public virtual ClientEntity Client { get; set; }
         public int IdClient { get; set; }           
         public decimal TotalPrice { get; set; }
-
+        public Boolean IsCheckOut { get; set; }
     }
 }

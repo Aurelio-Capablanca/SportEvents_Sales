@@ -24,8 +24,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                     {
                         HasDiscount = false,
                         Discount = 0,
-                        IdGame = request.IdGame,
-                        AvailableTotal = 0,
+                        IdGame = request.IdGame
                     };
                     await _context.AddAsync(ticket);
                     await _context.SaveChangesAsync();
@@ -56,8 +55,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         IDTicket = request.IdTicket,
                         HasDiscount = false,
                         Discount = 0,
-                        IdGame = request.IdGame,
-                        AvailableTotal = 0,
+                        IdGame = request.IdGame
                     };
                     _context.Update(ticket);
                     await _context.SaveChangesAsync();
@@ -102,8 +100,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 var tickets = await _context.Tickets
                     .Select(ticket => new TicketDTO
                     {
-                        IdTicket = ticket.IDTicket,
-                        AvailableSeats = ticket.AvailableTotal,
+                        IdTicket = ticket.IDTicket,                        
                         Prices = _context.TicketPrice
                         .Where(tk => tk.Tickets.IDTicket == ticket.IDTicket)
                         .Select(prices => new PricesDTO
@@ -118,8 +115,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         LocalTeam = ticket.Game.LocalTeam,
                         VisitorTeam = ticket.Game.VisitorTeam,
                         Location = ticket.Game.Stadium.Location,
-                        Tournament = ticket.Game.Tournament,
-                        TotalPrice = ticket.TotalPrice,
+                        Tournament = ticket.Game.Tournament,                       
                         Date = ticket.Game.TimeGame.ToString("dd/MM/yyyy"),
                         Time = ticket.Game.TimeGame.ToString("h:mm tt")
                     }).ToListAsync();
@@ -151,8 +147,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                     .Where(ticket => ticket.IDTicket == IdTicket)
                     .Select(ticket => new TicketDTO
                     {
-                        IdTicket = ticket.IDTicket,
-                        AvailableSeats = ticket.AvailableTotal,
+                        IdTicket = ticket.IDTicket,                       
                         Prices = _context.TicketPrice
                         .Where(tk => tk.Tickets.IDTicket == ticket.IDTicket)
                         .Select(prices => new PricesDTO
@@ -168,7 +163,6 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         VisitorTeam = ticket.Game.VisitorTeam,
                         Location = ticket.Game.Stadium.Location,
                         Tournament = ticket.Game.Tournament,
-                        TotalPrice = ticket.TotalPrice,
                         Date = ticket.Game.TimeGame.ToString("dd/MM/yyyy"),
                         Time = ticket.Game.TimeGame.ToString("h:mm tt")
                     }).FirstAsync();

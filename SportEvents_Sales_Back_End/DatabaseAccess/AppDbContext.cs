@@ -49,6 +49,7 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.Property(o => o.DateStart).HasColumnName("datetime_start");
                 entity.Property(o => o.DateEnd).HasColumnName("datetime_close");
                 entity.Property(o => o.IdClient).HasColumnName("id_cliente");
+                entity.Property(o => o.IsCheckOut).HasColumnName("is_checkout");
                 entity.Property(o => o.TotalPrice).HasColumnName("total_price");
                 entity.HasOne(o => o.Client).WithMany().HasForeignKey(o => o.IdClient);
             });
@@ -75,9 +76,7 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
                 entity.Property(t => t.HasDiscount).HasColumnName("has_discount");
                 entity.Property(t => t.Discount).HasColumnName("percentage");
                 entity.Property(t => t.CodeTicket).HasColumnName("code_ticket");
-                entity.Property(t => t.IdGame).HasColumnName("id_partido");
-                entity.Property(t => t.AvailableTotal).HasColumnName("cupo_disponible");
-                entity.Property(t => t.TotalPrice).HasColumnName("total_price");
+                entity.Property(t => t.IdGame).HasColumnName("id_partido");                
                 entity.HasOne(t => t.Game).WithMany().HasForeignKey(t => t.IdGame);
             });
 

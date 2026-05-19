@@ -56,6 +56,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         DateStart = DateTime.Now,
                         IdClient = CurrentClient,
                         TotalPrice = totalOrder,
+                        IsCheckOut = false
                     };
                     await _context.Orders.AddAsync(order);
                     await _context.SaveChangesAsync();
@@ -91,8 +92,10 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                 }
                 foreach (var ticket in request.Tickets)
                 {
-                    await _context.Tickets.Where(tck => tck.IDTicket == ticket.IdTicket)
-                        .ExecuteUpdateAsync(set => set.SetProperty(up => up.AvailableTotal, (ticket.AvailableSeats - ticket.InCartTickets)));
+                    await _context.TicketPrice.Where(pt =>
+                            pt.IdTicket == ticket.IdTicket &&
+                            pt.IdTicketPrice == ticket.IdPriceTicket)
+                    .ExecuteUpdateAsync(set => set.SetProperty(up => up.AvailableSeats, (ticket.AvailableSeats - ticket.InCartTickets)));
                     await _context.SaveChangesAsync();
                 }
                 await transaction.CommitAsync();
@@ -128,13 +131,16 @@ namespace SportEvents_Sales_Back_End.Domain.Business
             {
 
                 var tickets = await _context.TicketOrder
-                    .Where(ot => ot.Order.Client.Email == EmailClient && ot.Order.Status && ot.IsBillable)
+                    .Where(ot => ot.Order.Client.Email == EmailClient &&
+                                 ot.Order.Status &&
+                                 ot.Order.IsCheckOut == false &&
+                                 ot.IsBillable)
                     .Select(ot => new TicketDTO
                     {
                         IdTicket = ot.Tickets.IDTicket,
                         IdOrder = ot.Order.Id,
                         IdTicketPrice = ot.TicketPrice.IdTicketPrice,
-                        AvailableSeats = ot.Tickets.AvailableTotal,
+                        AvailableSeats = ot.TicketPrice.AvailableSeats,
                         Discount = ot.Tickets.Discount,
                         Stadium = ot.Tickets.Game.Stadium.Name,
                         LocalTeam = ot.Tickets.Game.LocalTeam,
@@ -178,26 +184,40 @@ namespace SportEvents_Sales_Back_End.Domain.Business
         {
             int IdTicket = request.IdTicket;
             int IdOrder = request.IdOrder;
+            int IdPriceTicket = request.IdPriceTicket;
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
                 // Update Ticket (total_tickets =+ 1) Where id_ticket = @1
                 await _context.TicketOrder
-                    .Where(ot => ot.IdOrder == request.IdOrder
-                    && ot.IdTicket == request.IdTicket
-                    && ot.IdPriceTicket == request.IdPriceTicket)
-                    .ExecuteUpdateAsync(set => set.SetProperty(up => up.IsBillable , false));
-                var ticketRemove = await _context.TicketPrice
-                    .Where(tr => tr.IdTicket == request.IdTicket && tr.IdTicketPrice == request.IdPriceTicket)
+                    .Where(ot => ot.IdOrder == IdOrder
+                    && ot.IdTicket == IdTicket
+                    && ot.IdPriceTicket == IdPriceTicket)
+                    .ExecuteUpdateAsync(set => set.SetProperty(up => up.IsBillable, false));
+                //Restore seats
+                var seatsAvailable = await _context.TicketPrice
+                    .Where(tr => tr.IdTicket == IdTicket && tr.IdTicketPrice == IdPriceTicket)
                     .Select(tr => tr.AvailableSeats)
                     .FirstAsync();
-                await _context.Tickets.Where(tck => tck.IDTicket == IdTicket)
-                   .ExecuteUpdateAsync(set => set.SetProperty(up => up.AvailableTotal, (ticketRemove + 1)));
+                var seatsInCart = await _context.TicketOrder
+                    .Where(tr => tr.IdTicket == IdTicket &&
+                                 tr.TicketPrice.IdTicketPrice == IdPriceTicket &&
+                                 tr.IdOrder == IdOrder)
+                    .Select(tr => tr.BoughtSeats)
+                    .FirstAsync();
+                //--- Execution
+                //await _context.TicketPrice.Where(pt => pt.)
+                //    .ExecuteUpdateAsync(set => set.SetProperty(up => up.AvailableSeats, (seatsAvailable + seatsInCart)));
+                await _context.TicketOrder
+                    .Where(ot => ot.IdOrder == IdOrder &&
+                                 ot.IsBillable)
+                    .ExecuteUpdateAsync(set => set.SetProperty(up => up.TicketPrice.AvailableSeats, (seatsAvailable + seatsInCart)));
                 await _context.SaveChangesAsync();
+                //
                 var prices = await _context.TicketOrder
-                    .Where(ot => ot.IdOrder == request.IdOrder                       
+                    .Where(ot => ot.IdOrder == request.IdOrder
                         && ot.IdPriceTicket != request.IdPriceTicket)
-                    .Select(ot => ot.TicketPrice.Price).ToListAsync();
+                    .Select(ot => (ot.TicketPrice.Price * ot.BoughtSeats)).ToListAsync();
                 var totalForOrder = prices.Sum();
                 await _context.Orders.Where(ord => ord.Id == IdOrder)
                     .ExecuteUpdateAsync(set => set.SetProperty(ord => ord.TotalPrice, totalForOrder));
@@ -232,10 +252,12 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         .Where(or => or.Client.Email == session.Email && or.Status)
                         .Select(or => or.Id)
                         .FirstAsync();
-                foreach (var tickets in request.Tickets)
+                foreach (var ticket in request.Tickets)
                 {
-                    await _context.Tickets.Where(tck => tck.IDTicket == tickets.IdTicket)
-                    .ExecuteUpdateAsync(set => set.SetProperty(up => up.AvailableTotal, (tickets.AvailableSeats + tickets.InCartTickets)));
+                    await _context.TicketPrice.Where(pt =>
+                            pt.IdTicket == ticket.IdTicket &&
+                            pt.IdTicketPrice == ticket.IdPriceTicket)
+                    .ExecuteUpdateAsync(set => set.SetProperty(up => up.AvailableSeats, (ticket.AvailableSeats + ticket.InCartTickets)));
                     await _context.SaveChangesAsync();
                 }
                 await _context.Orders.Where(ord => ord.Id == order)
@@ -278,6 +300,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                    .ExecuteUpdateAsync(set => set
                    .SetProperty(ord => ord.Status, false)
                    .SetProperty(ord => ord.DateEnd, DateTime.Now)
+                   .SetProperty(ord => ord.IsCheckOut, true)
                    );
                 await _context.SaveChangesAsync();
                 await transaction.CommitAsync();
