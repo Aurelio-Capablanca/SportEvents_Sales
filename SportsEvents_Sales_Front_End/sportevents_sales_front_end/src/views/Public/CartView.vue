@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 const token = localStorage.getItem('token');
 const cart = ref([])
@@ -27,27 +28,82 @@ const loadCart = async () => {
             cart.value = response.data.dataset
         }
     } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Failed to load cart'
+        })
         console.error('View error:', error)
     }
 }
 
 
-const removeItem = async (id) => {
-    console.log("Removing ", id)
-
+const removeItem = async (ticket, order, price) => {
+    console.log("Removing ", ticket, order, price)
+    const result = await Swal.fire({
+        title: 'Remove ticket?',
+        text: 'This item will be removed from your cart',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, remove it'
+    })
+    if (result.isConfirmed) {
+        console.log("Removing item")
+        try {
+            const response = await axios.post(
+                'http://192.168.122.44:5105/cart-api/delete-one-cart',
+                {
+                    "IdPriceTicket": price,
+                    "IdTicket": ticket,
+                    "IdOrder": order
+                },
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                }
+            )
+            console.log(response.data);
+            if (response.data.status == 200) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Ticket Removed',
+                    text: 'Ticket Removed from Cart Successfully'
+                })
+            }
+        } catch (error) {
+            console.error('View error:', error)
+        }
+    }
 }
 
-// const total = computed(() => {
-//     return cart.value.reduce((sum, item) => {
-//         return sum + (item.price * item.quantity)
-//     }, 0)
-// })
 
-// const removeItem = (id) => {
-//     cart.value = cart.value.filter(
-//         item => item.id !== id
-//     )
-// }
+const doCheckout = async () => {
+    try {
+        const request = await axios.get('http://192.168.122.44:5105/cart-api/checkout-cart',
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+        console.log(request.data);
+        if (request.data.status == 200) {
+            console.log(request.data.dataset);
+            Swal.fire({
+                icon: 'success',
+                title: 'Successful Checkout!',
+                text: 'Success'
+            })
+        }
+    } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Failed to Checkout'
+        })
+        console.error('Checkout error:', error)
+    }
+}
 </script>
 
 <template>
@@ -56,7 +112,7 @@ const removeItem = async (id) => {
             <h1 class="fw-bold">
                 Shopping Cart
             </h1>
-            <router-link to="/events" class="btn btn-outline-primary">
+            <router-link to="/public-dashboard" class="btn btn-outline-primary">
                 Continue Shopping
             </router-link>
         </div>
@@ -93,7 +149,8 @@ const removeItem = async (id) => {
 
                                 </div>
                                 <div class="col-md-2 text-end">
-                                    <button class="btn btn-outline-danger btn-sm" @click="removeItem(event.id)">
+                                    <button class="btn btn-outline-danger btn-sm"
+                                        @click="removeItem(event.idTicket, event.idOrder, event.idTicketPrice)">
                                         Remove
                                     </button>
                                 </div>
@@ -114,7 +171,7 @@ const removeItem = async (id) => {
                                 ${{ cart.totalPrice }}
                             </span>
                         </div>
-                        <button class="btn btn-success w-100">
+                        <button class="btn btn-success w-100" @click="doCheckout()">
                             Proceed to Checkout
                         </button>
                     </div>

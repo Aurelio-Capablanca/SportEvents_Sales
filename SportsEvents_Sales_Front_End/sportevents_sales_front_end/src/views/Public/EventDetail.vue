@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 const route = useRoute()
 const token = localStorage.getItem('token');
@@ -35,16 +36,6 @@ const loadEvent = async () => {
 }
 
 
-/*
-"Tickets": [
-        {
-            "IdTicket": 7,
-            "IdPriceTicket" : 4,
-            "AvailableSeats": 600,
-            "InCartTickets": 5
-        }
-*/
-
 const addToCart = async (ticket, price, availableSeats) => {
     console.log("inside!", ticket)
     console.log(seatAdd.value)
@@ -72,8 +63,18 @@ const addToCart = async (ticket, price, availableSeats) => {
         console.log(request.data);
         if (request.data.status == 200) {
             console.log(request.data.dataset);
+             Swal.fire({
+                icon: 'success',
+                title: 'Added To Cart',
+                text: 'Ticket Added to Cart Successfully'
+            })
         }
     } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Failed to add'
+        })
         console.error('Cart error:', error)
     }
 
