@@ -123,6 +123,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                     .Where(cl => cl.Email == Email)
                     .FirstAsync();
                 _context.Clients.Remove(CurrentClient);
+                _context.SaveChanges();
                 return new GeneralResponse<String>
                 {
                     Message = "Succesfull Delete",
