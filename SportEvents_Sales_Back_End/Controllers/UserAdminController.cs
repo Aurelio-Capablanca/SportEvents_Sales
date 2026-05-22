@@ -7,19 +7,19 @@ using SportEvents_Sales_Back_End.Security;
 
 namespace SportEvents_Sales_Back_End.Controllers
 {
+
     [ApiController]
-    [Route("game-api")]
-    public class GameController(GameLogic gameLogic, IUserSessionProvider provider) : Controller
+    [Route("user-api")]
+    public class UserAdminController(UserAdminLogic userLogic, IUserSessionProvider provider) : Controller
     {
-        private readonly GameLogic _gameLogic = gameLogic;
+        private readonly UserAdminLogic _userLogic = userLogic;
         private readonly GlobalSession _globalSession = provider.GetSession();
 
-
         [Authorize]
-        [HttpPost("save-game", Name = "save-game")]
-        public async Task<ActionResult> SaveGameAsyncController([FromBody] GameEntity request)
+        [HttpPost("save-user", Name = "save-user")]
+        public async Task<ActionResult> SaveuserAsync([FromBody] UserEntity request)
         {
-            var process = await this._gameLogic.SaveGameAsync(request);
+            var process = await this._userLogic.SaveAdminAsync(request);
             if (process.Status == 200)
             {
                 return Ok(process);
@@ -32,26 +32,10 @@ namespace SportEvents_Sales_Back_End.Controllers
 
 
         [Authorize]
-        [HttpGet("game-get-one/{IdGame}", Name = "game-get-one")]
-        public async Task<ActionResult> ReadOnegame(int IdGame)
+        [HttpGet("user-get-one/{IdUser}", Name = "user-get-one")]
+        public async Task<ActionResult> ReadOneUser(int IdUser)
         {
-            var process = await this._gameLogic.ShowOneEntity(IdGame);
-            if (process.Status == 200)
-            {
-                return Ok(process);
-            }
-            else
-            {
-                return BadRequest(process);
-            }
-        }
-
-        
-        [Authorize]
-        [HttpGet("game-get-all", Name = "game-get-all")]
-        public async Task<ActionResult> ReadAllGames()
-        {
-            var process = await this._gameLogic.ShowAllEntities();
+            var process = await this._userLogic.ShowOneEntity(IdUser);
             if (process.Status == 200)
             {
                 return Ok(process);
@@ -64,10 +48,26 @@ namespace SportEvents_Sales_Back_End.Controllers
 
 
         [Authorize]
-        [HttpGet("game-delete/{IdGame}", Name = "game-delete")]
-        public async Task<ActionResult> DeleteGame(int IdGame)
+        [HttpGet("user-get-all", Name = "user-get-all")]
+        public async Task<ActionResult> ReadAllAdmin()
         {
-            var process = await this._gameLogic.DeleteGame(IdGame);
+            var process = await this._userLogic.ShowAllEntities();
+            if (process.Status == 200)
+            {
+                return Ok(process);
+            }
+            else
+            {
+                return BadRequest(process);
+            }
+        }
+
+
+        [Authorize]
+        [HttpGet("user-delete/{IdUser}", Name = "user-delete")]
+        public async Task<ActionResult> DeleteUser(int IdUser)
+        {
+            var process = await this._userLogic.DeleteUser(IdUser);
             if (process.Status == 200)
             {
                 return Ok(process);

@@ -3,29 +3,40 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SportEvents_Sales_Back_End.Domain.Business;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Domain;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Request;
 using SportEvents_Sales_Back_End.Security;
+using System.Diagnostics;
 
 namespace SportEvents_Sales_Back_End.Controllers
 {
 
     [ApiController]
     [Route("ticket-api")]
-    public class TicketController : Controller
+    public class TicketController(TicketLogic ticketLogic, IUserSessionProvider provider) : Controller
     {
 
-        private readonly TicketLogic _ticketLogic;
-        private readonly GlobalSession _globalSession;
+        private readonly TicketLogic _ticketLogic = ticketLogic;
+        private readonly GlobalSession _globalSession = provider.GetSession();
 
-
-        public TicketController(TicketLogic ticketLogic, IUserSessionProvider provider) 
+        [Authorize]
+        [HttpPost("save-ticket", Name = "save-ticket")]
+        public async Task<ActionResult> SaveTicketsAsync([FromBody] TicketWrapperRequest request)
         {
-            this._ticketLogic = ticketLogic;
-            this._globalSession = provider.GetSession();
+            var process = await this._ticketLogic.SaveTicketsAsync(request);
+            if (process.Status == 200)
+            {
+                return Ok(process);
+            }
+            else
+            {
+                return BadRequest(process);
+            }
         }
+
 
         [Authorize]
         [HttpGet("ticket-get-all", Name = "ticket-get-all")]
-        public async Task<ActionResult> ReadAllTickets() 
+        public async Task<ActionResult> ReadAllTickets()
         {
             var process = await this._ticketLogic.ReadAllTickets();
             if (process.Status == 200)

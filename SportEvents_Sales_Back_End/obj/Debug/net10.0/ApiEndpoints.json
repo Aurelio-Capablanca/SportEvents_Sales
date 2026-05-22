@@ -216,6 +216,68 @@
     "EndpointName": "save-client"
   },
   {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.GameController",
+    "Method": "DeleteGame",
+    "RelativePath": "game-api/game-delete/{IdGame}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdGame",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "game-delete"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.GameController",
+    "Method": "ReadAllGames",
+    "RelativePath": "game-api/game-get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "game-get-all"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.GameController",
+    "Method": "ReadOnegame",
+    "RelativePath": "game-api/game-get-one/{IdGame}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdGame",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "game-get-one"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.GameController",
+    "Method": "SaveGameAsyncController",
+    "RelativePath": "game-api/save-game",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SportEvents_Sales_Back_End.Model.Entities.GameEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "save-game"
+  },
+  {
     "ContainingType": "Program\u002B\u003C\u003Ec",
     "Method": "\u003C\u003CMain\u003E$\u003Eb__0_4",
     "RelativePath": "health/db",
@@ -250,6 +312,68 @@
     ]
   },
   {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.StadiumController",
+    "Method": "SaveStadiumAsync",
+    "RelativePath": "stadium-api/save-stadium",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SportEvents_Sales_Back_End.Model.Entities.StadiumEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "save-stadium"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.StadiumController",
+    "Method": "DeleteStadium",
+    "RelativePath": "stadium-api/stadium-delete/{IdStadium}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdStadium",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "stadium-delete"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.StadiumController",
+    "Method": "ReadAllStadiums",
+    "RelativePath": "stadium-api/stadium-get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "stadium-get-all"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.StadiumController",
+    "Method": "ReadOneStadium",
+    "RelativePath": "stadium-api/stadium-get-one/{IdStadium}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdStadium",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "stadium-get-one"
+  },
+  {
     "ContainingType": "SportEvents_Sales_Back_End.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "summary-weather",
@@ -269,6 +393,23 @@
       }
     ],
     "EndpointName": "GetWeatherForecast"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.TicketController",
+    "Method": "SaveTicketsAsync",
+    "RelativePath": "ticket-api/save-ticket",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SportEvents_Sales_Back_End.Model.ModelDomain.Request.TicketWrapperRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "save-ticket"
   },
   {
     "ContainingType": "SportEvents_Sales_Back_End.Controllers.TicketController",
@@ -297,5 +438,129 @@
     ],
     "ReturnTypes": [],
     "EndpointName": "ticket-get-one"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.UserAdminController",
+    "Method": "SaveuserAsync",
+    "RelativePath": "user-api/save-user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SportEvents_Sales_Back_End.Model.Entities.UserEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "save-user"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.UserAdminController",
+    "Method": "DeleteUser",
+    "RelativePath": "user-api/user-delete/{IdUser}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUser",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "user-delete"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.UserAdminController",
+    "Method": "ReadAllAdmin",
+    "RelativePath": "user-api/user-get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "user-get-all"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.UserAdminController",
+    "Method": "ReadOneUser",
+    "RelativePath": "user-api/user-get-one/{IdUser}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUser",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "user-get-one"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.ZonePricesController",
+    "Method": "SaveCartAsync",
+    "RelativePath": "zone-prices-api/save-zone",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SportEvents_Sales_Back_End.Model.Entities.ZonePricesEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "save-zone"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.ZonePricesController",
+    "Method": "DeleteTicket",
+    "RelativePath": "zone-prices-api/zone-delete/{IdZone}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdZone",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "zone-delete"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.ZonePricesController",
+    "Method": "ReadAllTickets",
+    "RelativePath": "zone-prices-api/zone-get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "zone-get-all"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.ZonePricesController",
+    "Method": "ReadOneTickets",
+    "RelativePath": "zone-prices-api/zone-get-one/{IdZone}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdZone",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "zone-get-one"
   }
 ]

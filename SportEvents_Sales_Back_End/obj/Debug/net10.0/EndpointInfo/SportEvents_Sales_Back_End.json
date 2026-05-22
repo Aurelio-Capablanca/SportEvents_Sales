@@ -246,6 +246,108 @@
         }
       }
     },
+    "/game-api/save-game": {
+      "post": {
+        "tags": [
+          "Game"
+        ],
+        "operationId": "save-game",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GameEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GameEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GameEntity"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/game-api/game-get-one/{IdGame}": {
+      "get": {
+        "tags": [
+          "Game"
+        ],
+        "operationId": "game-get-one",
+        "parameters": [
+          {
+            "name": "IdGame",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/game-api/game-get-all": {
+      "get": {
+        "tags": [
+          "Game"
+        ],
+        "operationId": "game-get-all",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/game-api/game-delete/{IdGame}": {
+      "get": {
+        "tags": [
+          "Game"
+        ],
+        "operationId": "game-delete",
+        "parameters": [
+          {
+            "name": "IdGame",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/auth/friendly-hello": {
       "get": {
         "tags": [
@@ -405,6 +507,141 @@
         }
       }
     },
+    "/stadium-api/save-stadium": {
+      "post": {
+        "tags": [
+          "Stadium"
+        ],
+        "operationId": "save-stadium",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StadiumEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StadiumEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StadiumEntity"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/stadium-api/stadium-get-one/{IdStadium}": {
+      "get": {
+        "tags": [
+          "Stadium"
+        ],
+        "operationId": "stadium-get-one",
+        "parameters": [
+          {
+            "name": "IdStadium",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/stadium-api/stadium-get-all": {
+      "get": {
+        "tags": [
+          "Stadium"
+        ],
+        "operationId": "stadium-get-all",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/stadium-api/stadium-delete/{IdStadium}": {
+      "get": {
+        "tags": [
+          "Stadium"
+        ],
+        "operationId": "stadium-delete",
+        "parameters": [
+          {
+            "name": "IdStadium",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ticket-api/save-ticket": {
+      "post": {
+        "tags": [
+          "Ticket"
+        ],
+        "operationId": "save-ticket",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TicketWrapperRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TicketWrapperRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TicketWrapperRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/ticket-api/ticket-get-all": {
       "get": {
         "tags": [
@@ -427,6 +664,108 @@
         "parameters": [
           {
             "name": "IdTicket",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user-api/save-user": {
+      "post": {
+        "tags": [
+          "UserAdmin"
+        ],
+        "operationId": "save-user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserEntity"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user-api/user-get-one/{IdUser}": {
+      "get": {
+        "tags": [
+          "UserAdmin"
+        ],
+        "operationId": "user-get-one",
+        "parameters": [
+          {
+            "name": "IdUser",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user-api/user-get-all": {
+      "get": {
+        "tags": [
+          "UserAdmin"
+        ],
+        "operationId": "user-get-all",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user-api/user-delete/{IdUser}": {
+      "get": {
+        "tags": [
+          "UserAdmin"
+        ],
+        "operationId": "user-delete",
+        "parameters": [
+          {
+            "name": "IdUser",
             "in": "path",
             "required": true,
             "schema": {
@@ -481,6 +820,108 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/zone-prices-api/save-zone": {
+      "post": {
+        "tags": [
+          "ZonePrices"
+        ],
+        "operationId": "save-zone",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ZonePricesEntity"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ZonePricesEntity"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ZonePricesEntity"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/zone-prices-api/zone-get-one/{IdZone}": {
+      "get": {
+        "tags": [
+          "ZonePrices"
+        ],
+        "operationId": "zone-get-one",
+        "parameters": [
+          {
+            "name": "IdZone",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/zone-prices-api/zone-get-all": {
+      "get": {
+        "tags": [
+          "ZonePrices"
+        ],
+        "operationId": "zone-get-all",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/zone-prices-api/zone-delete/{IdZone}": {
+      "get": {
+        "tags": [
+          "ZonePrices"
+        ],
+        "operationId": "zone-delete",
+        "parameters": [
+          {
+            "name": "IdZone",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -559,6 +1000,62 @@
           },
           "pass": {
             "type": "string"
+          }
+        }
+      },
+      "GameEntity": {
+        "type": "object",
+        "properties": {
+          "idGame": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "localTeam": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "visitorTeam": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "timeGame": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "stadium": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/StadiumEntity"
+              }
+            ]
+          },
+          "idStadium": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "status": {
+            "type": "boolean"
+          },
+          "tournament": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },
@@ -648,6 +1145,39 @@
           }
         }
       },
+      "StadiumEntity": {
+        "type": "object",
+        "properties": {
+          "idStadium": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "location": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "capacity": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
       "TicketDeletor": {
         "type": "object",
         "properties": {
@@ -674,6 +1204,89 @@
               "string"
             ],
             "format": "int32"
+          }
+        }
+      },
+      "TicketPriceRequest": {
+        "type": "object",
+        "properties": {
+          "idTicketPrice": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "idPriceZone": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "price": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          },
+          "availableSeats": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
+      "TicketWrapperRequest": {
+        "type": "object",
+        "properties": {
+          "idTicket": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "idGame": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "ticketPrices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TicketPriceRequest"
+            }
+          }
+        }
+      },
+      "UserEntity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "userName": {
+            "type": "string"
+          },
+          "passwordHash": {
+            "type": "string"
           }
         }
       },
@@ -707,6 +1320,33 @@
             ]
           }
         }
+      },
+      "ZonePricesEntity": {
+        "type": "object",
+        "properties": {
+          "idZone": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "price": {
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "type": [
+              "number",
+              "string"
+            ],
+            "format": "double"
+          },
+          "zoneName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
       }
     }
   },
@@ -721,13 +1361,25 @@
       "name": "Client"
     },
     {
+      "name": "Game"
+    },
+    {
       "name": "Login"
+    },
+    {
+      "name": "Stadium"
     },
     {
       "name": "Ticket"
     },
     {
+      "name": "UserAdmin"
+    },
+    {
       "name": "WeatherForecast"
+    },
+    {
+      "name": "ZonePrices"
     }
   ]
 }

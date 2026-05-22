@@ -60,6 +60,10 @@ builder.Services.AddScoped<ClientRules>();
 builder.Services.AddScoped<CartLogic>();
 //Tickets
 builder.Services.AddScoped<TicketLogic>();
+builder.Services.AddScoped<GameLogic>();
+builder.Services.AddScoped<StadiumLogic>();
+builder.Services.AddScoped<UserAdminLogic>();
+builder.Services.AddScoped<ZonePricesLogic>();
 
 builder.Services.AddAuthorization();
 
