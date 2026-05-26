@@ -72,7 +72,7 @@ namespace SportEvents_Sales_Back_End.DatabaseAccess
             {
                 entity.ToTable("tickets");
                 entity.HasKey(t => t.IDTicket);
-                entity.Property(t => t.IDTicket).HasColumnName("id_ticket");//.ValueGeneratedOnAddOrUpdate();
+                entity.Property(t => t.IDTicket).HasColumnName("id_ticket").ValueGeneratedOnAdd();
                 entity.Property(t => t.HasDiscount).HasColumnName("has_discount");
                 entity.Property(t => t.Discount).HasColumnName("percentage");
                 entity.Property(t => t.CodeTicket).HasColumnName("code_ticket");

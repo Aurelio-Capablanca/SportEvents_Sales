@@ -40,6 +40,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         await _context.AddAsync(prices);
                         await _context.SaveChangesAsync();
                     }
+                    await transaction.CommitAsync();
                     return new GeneralResponse<string>
                     {
                         Status = 200,
@@ -72,6 +73,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                         _context.Update(prices);
                         await _context.SaveChangesAsync();
                     }
+                    await transaction.CommitAsync();
                     return new GeneralResponse<string>
                     {
                         Status = 200,

@@ -15,15 +15,10 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace SportEvents_Sales_Back_End.Domain.Business
 {
-    public class CartLogic
+    public class CartLogic(AppDbContext dbContext)
     {
 
-        private readonly AppDbContext _context;
-
-        public CartLogic(AppDbContext dbContext)
-        {
-            this._context = dbContext;
-        }
+        private readonly AppDbContext _context = dbContext;
 
 
         //Task<ActionResult<GeneralResponse<CartResponse>>>

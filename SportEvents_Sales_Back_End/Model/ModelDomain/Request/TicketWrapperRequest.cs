@@ -2,8 +2,7 @@
 {
     public class TicketWrapperRequest
     {
-        public int IdTicket { get; set; }
-        public int AvailableSeats { get; set; }
+        public int IdTicket { get; set; }        
         public int IdGame { get; set; }
         public List<TicketPriceRequest> TicketPrices { get; set; } = Enumerable.Empty<TicketPriceRequest>().ToList();
     }
