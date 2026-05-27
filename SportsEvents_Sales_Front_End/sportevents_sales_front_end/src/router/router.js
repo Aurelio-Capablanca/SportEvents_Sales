@@ -6,6 +6,7 @@ import EventDetails from "@/views/Public/EventDetail.vue"
 import CartView from "@/views/Public/CartView.vue";
 import GameMaintenance from "@/views/Private/GameMaintenance.vue";
 import StadiumMaintenance from "@/views/Private/StadiumMaintenance.vue";
+import PriceZonesMaintenance from "@/views/Private/PriceZonesMaintenance.vue";
 
 const routes = [
     { path: '/', redirect: '/public-dashboard' }, // Redirect root to dashboard
@@ -14,6 +15,7 @@ const routes = [
     { path: '/admin', component: PrivateDashboard, meta: { requiresAuth: true } },
     { path: '/game-admin', component: GameMaintenance, meta: { requiresAuth: true } },
     { path: '/stadium-admin', component: StadiumMaintenance, meta: { requiresAuth: true } },
+    { path: '/zone-price-admin', component: PriceZonesMaintenance, meta: { requiresAuth: true } },
     { path: '/game/:id', component: EventDetails},
     { path: '/cart/:id', component: CartView, meta: { requiresAuth: true } },
 ]
