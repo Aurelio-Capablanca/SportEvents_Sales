@@ -24,9 +24,7 @@ onMounted(() => {
 })
 
 const loadStadiums = async () => {
-
     try {
-
         const response = await axios.get(
             'http://192.168.122.44:5105/stadium-api/stadium-get-all',
             {
@@ -40,9 +38,7 @@ const loadStadiums = async () => {
             stadiums.value = response.data.dataset
         }
     } catch (error) {
-
         console.error(error)
-
         Swal.fire({
             icon: 'error',
             title: 'Error',
@@ -50,7 +46,6 @@ const loadStadiums = async () => {
         })
 
     }
-
 }
 
 const openCreateModal = () => {

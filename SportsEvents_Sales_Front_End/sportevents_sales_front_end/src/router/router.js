@@ -9,11 +9,13 @@ import StadiumMaintenance from "@/views/Private/StadiumMaintenance.vue";
 import PriceZonesMaintenance from "@/views/Private/PriceZonesMaintenance.vue";
 import UserManagement from "@/views/Private/UserManagement.vue";
 import TicketManagement from "@/views/Private/TicketManagement.vue";
+import LoginPrivate from "@/views/Private/LoginPrivate.vue";
 
 const routes = [
     { path: '/', redirect: '/public-dashboard' }, // Redirect root to dashboard
     { path: '/public-dashboard', component: PublicDashboard, meta: { requiresAuth: true } },
     { path: '/login-client', component: Login },
+    { path: '/login-admin', component: LoginPrivate },
     { path: '/admin', component: PrivateDashboard, meta: { requiresAuth: true } },
     { path: '/game-admin', component: GameMaintenance, meta: { requiresAuth: true } },
     { path: '/stadium-admin', component: StadiumMaintenance, meta: { requiresAuth: true } },
@@ -21,7 +23,7 @@ const routes = [
     { path: '/ticket-admin', component: TicketManagement, meta: { requiresAuth: true } },
     { path: '/user-admin', component: UserManagement, meta: { requiresAuth: true } }, 
     { path: '/game/:id', component: EventDetails},
-    { path: '/cart/:id', component: CartView, meta: { requiresAuth: true } },
+    { path: '/cart', component: CartView, meta: { requiresAuth: true } },
 ]
 
 

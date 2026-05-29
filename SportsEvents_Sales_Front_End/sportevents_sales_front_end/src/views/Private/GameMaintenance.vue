@@ -7,6 +7,9 @@ import * as bootstrap from 'bootstrap'
 const token = localStorage.getItem('token')
 
 const games = ref([])
+const stadiums = ref([])
+
+
 
 const gameForm = ref({
     idGame: 0,
@@ -22,10 +25,30 @@ let gameModal = null
 
 onMounted(() => {
     loadGames()
+    loadStadiums()
     const modalElement = document.getElementById('gameModal')
     gameModal = new bootstrap.Modal(modalElement)
 
 })
+
+
+const loadStadiums = async () => {
+    try {
+        const response = await axios.get(
+            'http://192.168.122.44:5105/stadium-api/stadium-get-all',
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }
+        )
+        if (response.data.status == 200) {
+            stadiums.value = response.data.dataset
+        }
+    } catch (error) {
+        console.error(error)
+    }
+}
 
 const loadGames = async () => {
     try {
@@ -255,11 +278,19 @@ const deleteGame = async (idGame) => {
                             </label>
                             <input type="datetime-local" class="form-control" v-model="gameForm.timeGame">
                         </div>
+                        <!-- new way -->
                         <div class="col-md-6">
                             <label class="form-label">
-                                Stadium ID
+                                Stadium
                             </label>
-                            <input type="number" class="form-control" v-model="gameForm.idStadium">
+                            <select class="form-select" v-model.number="gameForm.idStadium">
+                                <option :value="0">
+                                    Select Stadium
+                                </option>
+                                <option v-for="stadium in stadiums" :key="stadium.idStadium" :value="stadium.idStadium">
+                                    {{ stadium.name }}
+                                </option>
+                            </select>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">

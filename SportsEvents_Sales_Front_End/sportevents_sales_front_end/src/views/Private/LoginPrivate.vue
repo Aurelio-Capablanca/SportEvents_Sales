@@ -41,7 +41,7 @@ const login = async () => {
         const response = await axios.post('http://192.168.122.44:5105/auth/do-login', {
             User: email.value,
             Password: password.value,
-            IsAdmin: false
+            IsAdmin: true
         })
         console.log(response.data)
         if (response.data.status == 200) {
@@ -60,7 +60,7 @@ const login = async () => {
             setTimeout(() => {
                 emit('login-success', { email: userEmail })
             }, 1000)
-            router.push('/public-dashboard')
+            router.push('/admin')
         } else {
             // Server said login failed
             message.value = response.data.message || 'Login failed'
