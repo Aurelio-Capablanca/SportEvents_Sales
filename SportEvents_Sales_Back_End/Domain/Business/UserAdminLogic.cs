@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using SportEvents_Sales_Back_End.DatabaseAccess;
 using SportEvents_Sales_Back_End.Model.Entities;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Response;
@@ -11,10 +12,12 @@ namespace SportEvents_Sales_Back_End.Domain.Business
 
         public async Task<GeneralResponse<String>> SaveAdminAsync(UserEntity entity)
         {
+            var hasher = new PasswordHasher<object>();
+            entity.PasswordHash = hasher.HashPassword(null, entity.PasswordHash);
             try
             {
                 if (entity.Id == 0)
-                {
+                {                    
                     await _context.AddAsync(entity);
                     _context.SaveChanges();
                     return new GeneralResponse<string>
