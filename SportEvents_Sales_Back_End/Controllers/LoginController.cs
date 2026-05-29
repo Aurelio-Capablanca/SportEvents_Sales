@@ -39,7 +39,7 @@ namespace SportEvents_Sales_Back_End.Controllers
 
 
         [HttpPost("do-login", Name = "do-login")]
-        public async Task<GeneralResponse<String>> Login([FromBody] PasswordUser passwordUser)
+        public async Task<GeneralResponse<LoginResponse>> Login([FromBody] PasswordUser passwordUser)
         {
             return await _loginService.DoLogin(passwordUser);
         }

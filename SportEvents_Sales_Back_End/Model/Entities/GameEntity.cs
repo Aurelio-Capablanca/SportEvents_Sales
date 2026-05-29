@@ -2,15 +2,6 @@
 {
     public class GameEntity
     {
-        /*
-    id_partido int IDENTITY(1,1) NOT NULL,
-	equipo_local varchar(80)
-	equipo_visitante varchar(80)
-	fecha_hora datetime DEFAULT getdate() NULL,
-	id_estadio int NOT NULL,
-	estado bit DEFAULT 1 NULL,
-         */
-
         public int IdGame { get; set; }
         public string? LocalTeam { get; set; }
         public string? VisitorTeam { get; set; }

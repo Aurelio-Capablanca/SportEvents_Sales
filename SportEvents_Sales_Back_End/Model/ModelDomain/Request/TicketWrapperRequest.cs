@@ -4,6 +4,6 @@
     {
         public int IdTicket { get; set; }        
         public int IdGame { get; set; }
-        public List<TicketPriceRequest> TicketPrices { get; set; } = Enumerable.Empty<TicketPriceRequest>().ToList();
+        public List<TicketPriceRequest> Prices { get; set; } = Enumerable.Empty<TicketPriceRequest>().ToList();
     }
 }

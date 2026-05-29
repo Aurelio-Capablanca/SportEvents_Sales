@@ -28,7 +28,7 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                     };
                     await _context.AddAsync(ticket);
                     await _context.SaveChangesAsync();
-                    foreach (TicketPriceRequest price in request.TicketPrices)
+                    foreach (TicketPriceRequest price in request.Prices)
                     {
                         var prices = new TicketPriceEntity
                         {
@@ -60,12 +60,12 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                     };
                     _context.Update(ticket);
                     await _context.SaveChangesAsync();
-                    foreach (TicketPriceRequest price in request.TicketPrices)
+                    foreach (TicketPriceRequest price in request.Prices)
                     {
                         var prices = new TicketPriceEntity
                         {
-                            IdTicket = ticket.IDTicket,
-                            IdTicketPrice = price.IdTicketPrice,
+                            IdTicketPrice = price.Id,
+                            IdTicket = ticket.IDTicket,                            
                             AvailableSeats = price.AvailableSeats,
                             IdPriceZone = price.IdPriceZone,
                             Price = price.Price,
@@ -150,10 +150,12 @@ namespace SportEvents_Sales_Back_End.Domain.Business
                     .Select(ticket => new TicketDTO
                     {
                         IdTicket = ticket.IDTicket,                       
+                        IdGame = ticket.Game.IdGame,
                         Prices = _context.TicketPrice
                         .Where(tk => tk.Tickets.IDTicket == ticket.IDTicket)
                         .Select(prices => new PricesDTO
                         {
+                            IdPriceZone = prices.IdPriceZone,
                             ZonePrice = prices.ZonePrice.ZoneName,
                             Price = prices.Price,
                             AvailableSeats = prices.AvailableSeats,

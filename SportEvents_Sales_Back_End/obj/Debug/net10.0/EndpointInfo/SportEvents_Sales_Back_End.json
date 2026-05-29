@@ -460,17 +460,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponseOfstring"
+                  "$ref": "#/components/schemas/GeneralResponseOfLoginResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponseOfstring"
+                  "$ref": "#/components/schemas/GeneralResponseOfLoginResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GeneralResponseOfstring"
+                  "$ref": "#/components/schemas/GeneralResponseOfLoginResponse"
                 }
               }
             }
@@ -1095,6 +1095,42 @@
           }
         }
       },
+      "GeneralResponseOfLoginResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "dataset": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "#/components/schemas/LoginResponse"
+              }
+            ]
+          },
+          "status": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "error": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
       "GeneralResponseOfstring": {
         "type": "object",
         "properties": {
@@ -1124,6 +1160,20 @@
               "null",
               "string"
             ]
+          }
+        }
+      },
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "isAdmin": {
+            "type": "boolean"
           }
         }
       },
@@ -1210,7 +1260,7 @@
       "TicketPriceRequest": {
         "type": "object",
         "properties": {
-          "idTicketPrice": {
+          "id": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
               "integer",
@@ -1263,7 +1313,7 @@
             ],
             "format": "int32"
           },
-          "ticketPrices": {
+          "prices": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/TicketPriceRequest"

@@ -5,6 +5,7 @@
 
         public int IdTicket { get; set; }
         public int? IdOrder { get; set; }
+        public int? IdGame { get; set; }
         public int? IdTicketPrice { get; set; }
         public int AvailableSeats { get; set; }
         public decimal Discount { get; set; }

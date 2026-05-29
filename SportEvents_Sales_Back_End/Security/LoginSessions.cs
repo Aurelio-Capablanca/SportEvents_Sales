@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SportEvents_Sales_Back_End.DatabaseAccess;
 using SportEvents_Sales_Back_End.Model.Entities;
+using SportEvents_Sales_Back_End.Model.ModelDomain.Domain;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Request;
 using SportEvents_Sales_Back_End.Model.ModelDomain.Response;
 
@@ -18,7 +19,7 @@ namespace SportEvents_Sales_Back_End.Security
             this._issuer = issuer;
         }
 
-        public async Task<GeneralResponse<String>> DoLogin(PasswordUser passwordUser)
+        public async Task<GeneralResponse<LoginResponse>> DoLogin(PasswordUser passwordUser)
         {
             // find password_hash by username
             string? pass_hash;
@@ -36,13 +37,12 @@ namespace SportEvents_Sales_Back_End.Security
                 .Select(ad => ad.Pass)
                 .FirstOrDefaultAsync();
             }
-            
-            if (pass_hash == null) return new GeneralResponse<String> { Error = "Error in Credentials", Status = 500, Message = "User or Passwor is incorrect" };
+            if (pass_hash == null) return new GeneralResponse<LoginResponse> { Error = "Error in Credentials", Status = 500, Message = "User or Passwor is incorrect" };
             // validate hash
             var hasher = new PasswordHasher<object>();
             var verifier = hasher.VerifyHashedPassword(null, pass_hash, passwordUser.Password);
             if (verifier == PasswordVerificationResult.Failed)
-                return new GeneralResponse<String>
+                return new GeneralResponse<LoginResponse>
                 {
                     Error = "Error in Credentials",
                     Status = 500,
@@ -50,7 +50,8 @@ namespace SportEvents_Sales_Back_End.Security
                 };
             // issue JWT
             var token = _issuer.GenerateToken(passwordUser);
-            return new GeneralResponse<String> { Status = 200, Message = "Sucess!!!", Dataset = token };
+            LoginResponse response = new() { Token = token, IsAdmin = passwordUser.IsAdmin };
+            return new GeneralResponse<LoginResponse> { Status = 200, Message = "Sucess!!!", Dataset = response };
         }
 
     }
