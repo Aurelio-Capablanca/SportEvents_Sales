@@ -153,7 +153,7 @@ const deletePriceZone = async (idPriceZone) => {
                 Prize Zone Management
             </h1>
             <button class="btn btn-primary" @click="openCreateModal">
-                Add Prize Zone
+                Add Price Zone
             </button>
         </div>
         <div class="card shadow-sm">
@@ -201,7 +201,7 @@ const deletePriceZone = async (idPriceZone) => {
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">
-                        Game Form
+                        Price Zones Form
                     </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>

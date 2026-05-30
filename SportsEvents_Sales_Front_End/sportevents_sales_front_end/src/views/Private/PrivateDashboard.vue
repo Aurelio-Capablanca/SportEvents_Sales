@@ -1,9 +1,6 @@
 <script setup>
-import EventsView from '@/views/Public/EventsView.vue';
-import Events from '@/views/Public/EventsView.vue';
 
 </script>
-
 <template>
   <div class="page-wrapper">
     <div class="container">

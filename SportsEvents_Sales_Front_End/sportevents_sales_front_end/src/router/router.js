@@ -10,9 +10,10 @@ import PriceZonesMaintenance from "@/views/Private/PriceZonesMaintenance.vue";
 import UserManagement from "@/views/Private/UserManagement.vue";
 import TicketManagement from "@/views/Private/TicketManagement.vue";
 import LoginPrivate from "@/views/Private/LoginPrivate.vue";
+import ProfileEditor from "@/views/Public/ProfileEditor.vue";
 
 const routes = [
-    { path: '/', redirect: '/public-dashboard' }, // Redirect root to dashboard
+    { path: '/', redirect: '/public-dashboard' },
     { path: '/public-dashboard', component: PublicDashboard, meta: { requiresAuth: true } },
     { path: '/login-client', component: Login },
     { path: '/login-admin', component: LoginPrivate },
@@ -22,16 +23,15 @@ const routes = [
     { path: '/zone-price-admin', component: PriceZonesMaintenance, meta: { requiresAuth: true } },
     { path: '/ticket-admin', component: TicketManagement, meta: { requiresAuth: true } },
     { path: '/user-admin', component: UserManagement, meta: { requiresAuth: true } }, 
-    { path: '/game/:id', component: EventDetails},
+    { path: '/game/:id', component: EventDetails, meta: { requiresAuth: true } },
     { path: '/cart', component: CartView, meta: { requiresAuth: true } },
+    { path: '/client-profile', component: ProfileEditor, meta: { requiresAuth: true } },
 ]
-
 
 const router = createRouter({
     history: createWebHistory(),
     routes
 });
-
 
 router.beforeEach((to) => {
     const isAuthenticated = !!localStorage.getItem('token')

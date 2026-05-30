@@ -33,6 +33,7 @@ const loadCart = async () => {
             title: 'Error',
             text: 'Failed to load cart'
         })
+        router.push('/public-dashboard')
         console.error('View error:', error)
     }
 }

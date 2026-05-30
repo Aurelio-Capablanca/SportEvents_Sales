@@ -115,8 +115,7 @@ const login = async () => {
                                                 :class="'alert alert-' + (messageType === 'success' ? 'success' : 'danger')"
                                                 class="mt-3">
                                                 {{ message }}
-                                            </div>
-                                            <a class="small" href="password.html">Forgot Password?</a>
+                                            </div>                                            
                                         </div>
                                     </form>
                                 </div>
