@@ -683,6 +683,62 @@
         }
       }
     },
+    "/ticket-api/ticket-delete/{IdEntity}": {
+      "get": {
+        "tags": [
+          "Ticket"
+        ],
+        "operationId": "ticket-delete",
+        "parameters": [
+          {
+            "name": "IdEntity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ticket-api/ticket-price-delete/{IdEntity}": {
+      "get": {
+        "tags": [
+          "Ticket"
+        ],
+        "operationId": "ticket-price-delete",
+        "parameters": [
+          {
+            "name": "IdEntity",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/user-api/save-user": {
       "post": {
         "tags": [
