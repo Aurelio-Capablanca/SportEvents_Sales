@@ -189,6 +189,62 @@ namespace SportEvents_Sales_Back_End.Domain.Business
         }
 
 
+        public async Task<GeneralResponse<String>> DeleteTicketPrice(int IdEntity)
+        {
+            try
+            {
+                var ticketPrice = await _context.TicketPrice.Where(zn => zn.IdTicketPrice == IdEntity)
+                    .FirstAsync();
+                _context.TicketPrice.Remove(ticketPrice);
+                _context.SaveChanges();
+                return new GeneralResponse<String>
+                {
+                    Dataset = "Ticket Price deleted",
+                    Message = "Successful Deletion",
+                    Status = 200,
+
+                };
+            }
+            catch (Exception ex)
+            {
+                return new GeneralResponse<String>
+                {
+                    Message = $"Error {ex.Message}",
+                    Status = 500
+
+                };
+            }
+        }
+
+
+        public async Task<GeneralResponse<String>> DeleteTicket(int IdEntity)
+        {
+            try
+            {
+                var ticket = await _context.Tickets.Where(zn => zn.IDTicket == IdEntity)
+                    .FirstAsync();
+                _context.Tickets.Remove(ticket);
+                _context.SaveChanges();
+                return new GeneralResponse<String>
+                {
+                    Dataset = "Ticket deleted",
+                    Message = "Successful Deletion",
+                    Status = 200,
+
+                };
+            }
+            catch (Exception ex)
+            {
+                return new GeneralResponse<String>
+                {
+                    Message = $"Error {ex.Message}",
+                    Status = 500
+
+                };
+            }
+        }
+
+
 
     }
 }

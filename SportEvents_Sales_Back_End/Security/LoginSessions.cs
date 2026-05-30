@@ -46,7 +46,7 @@ namespace SportEvents_Sales_Back_End.Security
                 {
                     Error = "Error in Credentials",
                     Status = 500,
-                    Message = "User or Passwor is incorrect"
+                    Message = "User or Password is incorrect"
                 };
             // issue JWT
             var token = _issuer.GenerateToken(passwordUser);

@@ -413,6 +413,23 @@
   },
   {
     "ContainingType": "SportEvents_Sales_Back_End.Controllers.TicketController",
+    "Method": "DeleteTicket",
+    "RelativePath": "ticket-api/ticket-delete/{IdEntity}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdEntity",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "ticket-delete"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.TicketController",
     "Method": "ReadAllTickets",
     "RelativePath": "ticket-api/ticket-get-all",
     "HttpMethod": "GET",
@@ -438,6 +455,23 @@
     ],
     "ReturnTypes": [],
     "EndpointName": "ticket-get-one"
+  },
+  {
+    "ContainingType": "SportEvents_Sales_Back_End.Controllers.TicketController",
+    "Method": "DeleteTicketPrice",
+    "RelativePath": "ticket-api/ticket-price-delete/{IdEntity}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdEntity",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "ticket-price-delete"
   },
   {
     "ContainingType": "SportEvents_Sales_Back_End.Controllers.UserAdminController",

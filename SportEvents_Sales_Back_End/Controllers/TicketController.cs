@@ -66,5 +66,37 @@ namespace SportEvents_Sales_Back_End.Controllers
         }
 
 
+        [Authorize]
+        [HttpGet("ticket-delete/{IdEntity}", Name = "ticket-delete")]
+        public async Task<ActionResult> DeleteTicket(int IdEntity)
+        {
+            var process = await this._ticketLogic.DeleteTicket(IdEntity);
+            if (process.Status == 200)
+            {
+                return Ok(process);
+            }
+            else
+            {
+                return BadRequest(process);
+            }
+        }
+
+
+        [Authorize]
+        [HttpGet("ticket-price-delete/{IdEntity}", Name = "ticket-price-delete")]
+        public async Task<ActionResult> DeleteTicketPrice(int IdEntity)
+        {
+            var process = await this._ticketLogic.DeleteTicketPrice(IdEntity);
+            if (process.Status == 200)
+            {
+                return Ok(process);
+            }
+            else
+            {
+                return BadRequest(process);
+            }
+        }
+
+
     }
 }
