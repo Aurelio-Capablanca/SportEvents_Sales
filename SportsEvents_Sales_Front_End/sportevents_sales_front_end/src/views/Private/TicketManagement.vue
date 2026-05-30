@@ -116,8 +116,9 @@ const addPriceRow = () => {
     })
 }
 
-const removePriceRow = (index) => {
+const removePriceRow = (index, idDb) => {
     ticketForm.value.prices.splice(index, 1)
+    deleteTicketPrice(idDb)
 }
 
 
@@ -180,8 +181,77 @@ const saveTickets = async () => {
     }
 }
 
+const deleteTicket = async (idTicket) => {
+    const result = await Swal.fire({
+        title: 'Delete Ticket?',
+        text: 'This action cannot be undone',
+        icon: 'warning',
+        showCancelButton: true
+    })
+    if (!result.isConfirmed) {
+        return
+    }
+    try {
+        const response = await axios.get(
+            `http://192.168.122.44:5105/ticket-api/ticket-delete/${idTicket}`,
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }
+        )
+        if (response.data.status == 200) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Deleted',
+                text: 'Ticket deleted successfully'
+            })
+            loadTickets()
+        }
+    } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Delete Error',
+            text: 'Could not delete Ticket'
+        })
+    }
+}
 
-
+const deleteTicketPrice = async (idTicket) => {
+    const result = await Swal.fire({
+        title: 'Delete Ticket Price?',
+        text: 'This action cannot be undone',
+        icon: 'warning',
+        showCancelButton: true
+    })
+    if (!result.isConfirmed) {
+        return
+    }
+    try {
+        const response = await axios.get(
+            `http://192.168.122.44:5105/ticket-api/ticket-price-delete/${idTicket}`,
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }
+        )
+        if (response.data.status == 200) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Deleted',
+                text: 'Ticket Price deleted successfully'
+            })
+            loadTickets()
+        }
+    } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Delete Error',
+            text: 'Could not delete Ticket Price'
+        })
+    }
+}
 </script>
 <template>
     <div class="container py-5">
@@ -224,17 +294,12 @@ const saveTickets = async () => {
                                 <td>
                                     {{ ticket.date }} - {{ ticket.time }}
                                 </td>
-                                <!-- <td>
-                                    <span class="badge" :class="game.status ? 'bg-success' : 'bg-danger'">
-                                        {{ game.status ? 'Active' : 'Inactive' }}
-                                    </span>
-                                </td> -->
                                 <td>
                                     <div class="d-flex gap-2">
                                         <button class="btn btn-warning btn-sm" @click="openEditModal(ticket.idTicket)">
                                             Edit
                                         </button>
-                                        <button class="btn btn-danger btn-sm" @click="deleteGame(ticket.idTicket)">
+                                        <button class="btn btn-danger btn-sm" @click="deleteTicket(ticket.idTicket)">
                                             Delete
                                         </button>
                                     </div>
@@ -313,7 +378,7 @@ const saveTickets = async () => {
                                     </div>
                                     <div class="col-md-3 d-flex align-items-end">
 
-                                        <button class="btn btn-danger w-100" @click="removePriceRow(index)">
+                                        <button class="btn btn-danger w-100" @click="removePriceRow(index, price.id)">
                                             Remove
                                         </button>
                                     </div>
