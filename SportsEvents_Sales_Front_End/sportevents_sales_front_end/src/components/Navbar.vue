@@ -64,6 +64,9 @@ const logout = () => {
             <li class="nav-item">
               <router-link class="nav-link" to="/cart">Cart</router-link>
             </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/client-profile">Profile</router-link>
+            </li>
           </ul>
           <div class="d-flex align-items-center">            
             <button class="btn btn-outline-danger btn-sm" @click="logout">Logout</button>
